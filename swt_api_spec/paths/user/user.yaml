@@ -1,0 +1,86 @@
+post:
+  tags:
+    - User
+  summary: user stored after registration from clerk.
+  description: after registration from clerk the user object is sent to the database to be stored.
+  operationId: createUser
+
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            schema:
+              $ref: ../../components/schemas/user.yaml
+              example:
+                username: user1
+                email: user@example.com
+                password: 123456
+                first_name: John
+                last_name: Doe
+                role: user
+                company_id: mffbdbjdvdv4343235353J%#J%J@BJJH#52
+                phone_number: 1234567890
+  responses:
+    "201":
+      description: User created
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/user.yaml
+    "400":
+      description: "bad request"
+    "500":
+      description: Internal server error
+  security:
+    - BearerAuth: []
+# list all the users in the
+get:
+  tags:
+    - User
+  summary: List all users
+  description: This operation lets you list users by their status. A single status value can be provided in a single request. Only administrators can use this operation.
+  operationId: getAllUsers
+  security:
+    - BearerAuth: []
+  parameters:
+    - name: page
+      in: query
+      description: number  of pages to return by the server
+      schema:
+        type: integer
+      required: false
+    - name: limit
+      in: query
+      description: page size
+      required: false
+      schema:
+        type: integer
+        example: 20
+    - name: status
+      in: query
+      description: user status
+      required: true
+      schema:
+        type: string
+        example: employee
+        uniqueItems: true
+        items:
+          type: string
+          enum:
+            - employee
+            - administrator
+            - farmer
+            - auditor
+  responses:
+    "200":
+      description: User list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/user.yaml"
+    "400":
+      description: Invalid Input

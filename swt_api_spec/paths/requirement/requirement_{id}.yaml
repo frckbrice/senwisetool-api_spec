@@ -1,0 +1,86 @@
+patch:
+  tags:
+    - ement
+  summary: Update a eement
+  operationId: updateRequirement
+  parameters:
+    - name: id
+      in: path
+      description: requireement id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/requirement.yaml"
+          properties: {}
+  responses:
+    "200":
+      description: requirement updated
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+#get single requirement
+get:
+  tags:
+    - Requirement
+  summary: Get requirement by id
+  operationId: getRequirement
+  parameters:
+    - name: id
+      in: path
+      description: requirement id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+  responses:
+    "200":
+      description: requirement
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/requirement.yaml
+    "404":
+      description: requirement not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+
+#delete a requirement
+delete:
+  tags:
+    - Chapter
+  summary: Delete a chapter
+  operationId: deleteChapter
+  parameters:
+    - name: id
+      in: path
+      description: chapter id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+
+  responses:
+    "200":
+      description: chapter deleted
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "404":
+      description: No such chapter
+    "500":
+      description: internal server error

@@ -1,0 +1,5 @@
+# the offer object provide by the company
+type: object
+properties:
+  id:
+    description: the ID of the

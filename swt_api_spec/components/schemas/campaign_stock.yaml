@@ -1,0 +1,24 @@
+#the campaign stock object to be stored
+type: object
+properties:
+  id:
+    type: string
+    description: the unique identifier of a specific campaign stock
+    format: cuid
+    readOnly: true
+  quantity:
+    type: number
+    description: the quantity stored as not sold for a specific campaign.
+    format: int32
+  weight:
+    type: string
+    description: the weight use to mesure the stock
+  campaign_id:
+    type: string
+    format: cuid
+    description: the identifier of the campaign
+  company_id:
+    description: the companies ID to which the stock belongs to.
+    type: string
+    format: cuid
+    example: "AQA9CNo0cXNLt6sZp5Uc5P0"

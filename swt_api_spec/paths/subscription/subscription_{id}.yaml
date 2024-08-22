@@ -1,0 +1,30 @@
+# get a specific subscription by its id
+get:
+  tags:
+    - Subscription
+  summary: Get subscription by id
+  operationId: getSubscriptionById
+  parameters:
+    - name: id
+      in: path
+      description: subscription id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: subscription
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/subscription.yaml"
+    "404":
+      description: subscription not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access

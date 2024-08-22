@@ -1,0 +1,45 @@
+post:
+  tags:
+    - Requirement
+  summary: Create a requirement from Rainforest Alliance certification requirement
+  description: Create a requirement from Rainforest Alliance certification requirement dedicated for the offer plan.
+  operationId: createRequirement
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: "../../components/schemas/requirement.yaml"
+  responses:
+    "201":
+      description: requirement created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+# get all requirements
+get:
+  tags:
+    - Requirement
+  summary: Get all requirements
+  operationId: getAllRequirements
+  responses:
+    "200":
+      description: requirements
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/requirement.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

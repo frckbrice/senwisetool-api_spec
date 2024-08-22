@@ -1,0 +1,46 @@
+# retrieve inspection data by id
+get:
+  tags:
+    - Inspection_data
+  summary: Get project inspection data by project_id
+  parameters:
+    - name: project_id
+      in: path
+      description: inspection data id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+    - name: limit
+      in: query
+      description: limit
+      required: false
+      schema:
+        type: integer
+        example: 10
+      style: simple
+    - name: offset
+      in: query
+      description: offset
+      required: false
+      schema:
+        type: integer
+        example: 0
+      style: simple
+  operationId: getProjectInspectionData
+  responses:
+    "200":
+      description: inspection data
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/inspection_data.yaml
+    "404":
+      description: inspection data not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

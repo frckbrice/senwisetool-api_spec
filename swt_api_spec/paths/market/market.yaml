@@ -1,0 +1,51 @@
+#create a market
+post:
+  tags:
+    - Market
+  summary: Create a market
+  operationId: createMarket
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/market.yaml"
+  responses:
+    "201":
+      description: market created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+
+# get all markets
+get:
+  tags:
+    - Market
+  summary: Get all markets
+  operationId: getAllMarkets
+  security:
+    - BearerAuth: []
+  responses:
+    "200":
+      description: markets
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/market.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+      #content:
+      #application/json:
+      #schema:
+      #$ref: "../../components/schemas/error.yaml"

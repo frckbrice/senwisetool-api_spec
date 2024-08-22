@@ -1,0 +1,67 @@
+# create a training data
+post:
+  tags:
+    - Training
+  summary: create a training data
+  operationId: createTraining
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/training.yaml"
+  responses:
+    "201":
+      description: training data created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+  security:
+    - BearerAuth: []
+
+# get all training data
+get:
+  tags:
+    - Training
+  summary: get all training data
+  operationId: getAllTraining
+  parameters:
+    - name: skip
+      in: query
+      description: number of items to skip
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: limit
+      in: query
+      description: max records to return
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: company_id
+      in: query
+      required: false
+      schema:
+        type: string
+        format: cuid
+      description: the id of the company
+  responses:
+    "200":
+      description: training data
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/training.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+  security:
+    - BearerAuth: []

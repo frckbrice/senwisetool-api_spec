@@ -1,0 +1,23 @@
+# the audit of the market between the company and the farmers
+post:
+  tags:
+    - Market_audit
+  summary: Create a market audit object
+  operationId: createMarketAudit
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas/market_audit.yaml"
+  responses:
+    "201":
+      description: market audit created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+  security:
+    - BearerAuth: []

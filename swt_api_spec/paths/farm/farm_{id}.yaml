@@ -1,0 +1,91 @@
+get:
+  tags:
+    - Farm
+  summary: Get farm by id
+  operationId: getFarmById
+  parameters:
+    - in: path
+      name: id
+      description: farm id
+      required: true
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: farm
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/farm.yaml"
+    "404":
+      description: farm not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+
+delete:
+  tags:
+    - Farm
+  summary: Delete farm by id
+  operationId: deleteFarmById
+  parameters:
+    - in: path
+      name: id
+      description: farm id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: farm deleted
+    "404":
+      description: farm not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+patch:
+  tags:
+    - Farm
+  summary: Update farm by id
+  operationId: updateFarmById
+  parameters:
+    - name: id
+      in: path
+      description: farm id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+    - name: farmer_id
+      in: query
+      description: the farmer ID who is the owner of the farm.
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/farm.yaml"
+
+  responses:
+    "200":
+      description: farm updated
+    "404":
+      description: farm not foun

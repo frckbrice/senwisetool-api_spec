@@ -1,0 +1,68 @@
+# get a single user by id
+get:
+  tags:
+    - User
+  summary: Get user by id
+  operationId: getUserById
+  security:
+    - BearerAuth: []
+  parameters:
+    - in: path
+      name: id
+      description: user id
+      required: true
+      schema:
+        type: integer
+        example: 1
+
+  responses:
+    "200":
+      description: User
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/user.yaml
+    "404":
+      description: User not found
+
+# update user's data by id
+put:
+  tags:
+    - User
+  summary: Update user by id
+  operationId: updateUserById
+  parameters:
+    - name: id
+      in: path
+      description: user id#+
+      required: true
+      schema:
+        type: string
+        example: 1jssbbjsbjsbjs221878dd817dd87sd
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/user.yaml
+            properties:
+              id:
+                type: string
+                example: 1jssbbjsbjsbjs221878dd817dd87sd
+              username: user11452
+              email: user@example.com
+              password: 123456
+              first_name: John
+              last_name: Doe
+              role: user
+              company_id: 1jssbbjsbjsbjs221878dd817dd87sd
+              phone_number: 1234567890
+  responses:
+    "200":
+      description: User updated
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/user.yaml
+    "404":
+      description: User not found
+    "500":
+      description: Internal server error

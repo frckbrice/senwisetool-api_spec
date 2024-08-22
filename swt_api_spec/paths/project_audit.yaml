@@ -1,0 +1,21 @@
+# create a project audit object
+post:
+  tags:
+    - Project_audit
+  summary: Create a project audit object
+  operationId: createProjectAudit
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas/project_audit.yaml"
+  responses:
+    "201":
+      description: project audit created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

@@ -1,0 +1,26 @@
+# delete  collector agent
+delete:
+  tags:
+    - CollectorAgent
+  summary: Delete collector agent
+  operationId: deleteCollectorAgent
+  parameters:
+    - in: path
+      name: id
+      description: collector agent id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: collector agent deleted
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

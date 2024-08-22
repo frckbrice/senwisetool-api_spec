@@ -1,0 +1,98 @@
+# get a specific market by its id
+get:
+  tags:
+    - Market
+  summary: Get market by id
+  operationId: getMarketById
+  security:
+    - BearerAuth: []
+  parameters:
+    - in: path
+      name: id
+      description: market id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: market
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/market.yaml"
+    "404":
+      description: market not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+
+# update a market
+put:
+  tags:
+    - Market
+  summary: Update market
+  operationId: updateMarket
+  parameters:
+    - in: path
+      name: id
+      description: market id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/market.yaml"
+          properties: {}
+  responses:
+    "200":
+      description: market updated
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+  security:
+    - BearerAuth: []
+
+# delete a market
+delete:
+  tags:
+    - Market
+  summary: Delete market
+  operationId: deleteMarket
+  parameters:
+    - in: path
+      name: id
+      description: market id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: market deleted
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+
+  security:
+    - BearerAuth: []

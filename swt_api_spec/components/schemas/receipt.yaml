@@ -1,0 +1,95 @@
+# the receipt object
+type: object
+properties:
+  id:
+    type: string
+    format: cuid
+    readOnly: true
+    example: "cuid:123e4567-e89b-12d3-a456-426655440000"
+    description: "The unique Id of the receipt."
+  market_id:
+    type: string
+    format: cuid
+    example: "cuid:123e4567-e89b-12d3-a456-426655440000"
+    description: "The unique Id of the market."
+  village:
+    type: string
+    example: "Village 1"
+    description: "the village of the market."
+  farmer_id:
+    type: string
+    format: cuid
+    example: "cuid:123e4567-e89b-12d3-a456-426655440000"
+    description: "The unique Id of the farmer."
+  date:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "The date of the receipt."
+  net_weight:
+    type: number
+    example: 100
+    description: "The net weight of the receipt."
+  quantity:
+    type: number
+    example: 10
+    description: "The quantity of the receipt."
+  humidity_level:
+    type: number
+    format: float
+    example: 10
+    description: "The humidity level of the receipt."
+  net_weight_for_sale:
+    type: number
+    example: 100
+    description: "The net weight of the receipt for sale."
+  refraction:
+    type: number
+    format: float
+    example: 10
+    description: "The refraction of the receipt."
+    readOnly: true
+  unit_amount:
+    type: number
+    example: 100 per kg
+    description: "The unit amount of the receipt."
+    readOnly: true
+  total_amount:
+    type: number
+    example: 10000
+    description: "The total amount of the receipt."
+    readOnly: true
+  currency:
+    type: string
+    format: currency
+    example: "USD"
+    description: "The currency of the receipt."
+    readOnly: true
+  image_url:
+    type: string
+    example: "https://senima.com/wp-content/uploads/2022/01/gold.png"
+    description: "The image url of the receipt."
+    readOnly: true
+  statutory_prerequisite:
+    type: number
+    example: 10
+    description: "The statutory prerequisite of the receipt."
+    readOnly: true
+  net_paid:
+    type: number
+    example: 100
+    description: "The net paid of the receipt."
+    readOnly: true
+  farmer_signature:
+    type: string
+    description: "The farmer signature of the receipt."
+    readOnly: true
+  company_signature:
+    type: string
+    description: "The company signature of the receipt."
+    readOnly: true
+  farmer_image_url:
+    type: string
+    description: "The farmer image url of the receipt."
+    readOnly: true
+    example: "https://senima.com/wp-content/uploads/2022/01/gold.png"

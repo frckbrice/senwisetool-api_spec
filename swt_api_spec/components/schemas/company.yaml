@@ -1,0 +1,46 @@
+type: object
+properties:
+  id:
+    type: string
+    readOnly: true
+    format: cuid
+    description: "The unique Id of the company"
+  name:
+    type: string
+    minLength: 1
+    maxLength: 100
+    description: Name of the company
+    example: senima Co.
+  address:
+    type: string
+    description: Address of the company
+  country:
+    type: string
+    description: City of the company
+  city:
+    type: string
+    description: City of the company
+  phone:
+    type: string
+    description: Phone number of the company
+  email:
+    type: string
+    description: Email of the company
+  website:
+    type: string
+    description: Website of the company
+  description:
+    type: string
+    description: Description of the company
+  logo:
+    type: string
+    description: Logo of the company
+  paypal_id:
+    type: string
+    description: Paypal id of the company
+  payment_mode:
+    type: string
+    description: Payment mode of the company
+  sector_of_activity:
+    type: string
+    description: Sector of activity of the company

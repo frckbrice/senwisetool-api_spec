@@ -1,0 +1,41 @@
+post:
+  tags:
+    - Price
+  summary: Create price table for subscription
+  operationId: createPriceTable
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/price_plan.yaml"
+  responses:
+    "201":
+      description: price table created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+#get all price specified
+get:
+  tags:
+    - Price
+  summary: Get all price
+  operationId: getAllPrice
+  responses:
+    "200":
+      description: price
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/price_plan.yaml
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

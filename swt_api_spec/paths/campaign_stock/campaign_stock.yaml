@@ -1,0 +1,23 @@
+post:
+  tags:
+    - Camoaign_stock
+  summary: Create a campaign stock of products
+  description: Create a campaign stock of products that wasn't sold during a specific campaign. this operation is only performed by the Administration of the company registered.
+  operationId: createcampaignstock
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/campaign_stock.yaml"
+  responses:
+    "201":
+      description: campaign stock created Successfully
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

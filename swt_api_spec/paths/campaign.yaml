@@ -1,0 +1,56 @@
+#create a campaign from all operations of the company will be performed
+post:
+  tags:
+    - Campaign
+  summary: Create a new campaign
+  description: Create a new campaign from which all the operations like projects will be performed.
+  operationId: createCampaign
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              example: 2024-2025
+            description:
+              type: string
+  responses:
+    "201":
+      description: Campaign created successfully
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/campaign.yaml
+    "405":
+      description: method not allowed
+    "500":
+      description: Internal server error
+
+#read all campaigns
+get:
+  tags:
+    - Campaign
+  summary: List all campaigns
+  operationId: getAllCampaigns
+  security:
+    - BearerAuth: []
+  responses:
+    "200":
+      description: Campaign list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/campaign.yaml
+    "400":
+      description: bad request
+    "404":
+      description: Campaign not found
+    "500":
+      description: Internal server error

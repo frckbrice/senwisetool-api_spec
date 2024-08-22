@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Farm
+  summary: Update farm coordinate
+  operationId: updateFarmCoordinate
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type:
+            - object
+          required:
+            - lat
+            - long
+          properties:
+            lat:
+              type: number
+            long:
+              type: number
+  responses:
+    "201":
+      description: farm coordinate updated
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Farm_coodinates
+  summary: Get specific farm coordinates data
+  description: Get specific farm coordinates data by farm id
+  operationId: getFarmCoordinate
+  parameters:
+    - in: path
+      name: farmer_id
+      description: farm farmer_id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: farm coordinate
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/farm_coodinates.yaml
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

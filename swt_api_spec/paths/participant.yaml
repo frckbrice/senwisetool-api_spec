@@ -1,0 +1,16 @@
+#create participant object
+post:
+  tags:
+    - Participant
+  summary: create participant
+  description: create participant
+  operationId: createParticipant
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: "../components/schemas/participant.yaml"

@@ -1,0 +1,63 @@
+post:
+  tags:
+    - CollectorAgent
+  summary: Create a new collector agent
+  description: Create a new collector agent which is in charge of collecting data from farmer. only the administrator of the project can create a new collector agent
+  operationId: createCollectorAgent
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/collector_agent.yaml"
+  responses:
+    "201":
+      description: CollectorAgent created
+    "400":
+      description: "bad request"
+    "401":
+      description: "Unauthorized"
+    "403":
+      description: "Forbidden"
+    "500":
+      description: internal server error
+
+#get all collector agents
+get:
+  tags:
+    - CollectorAgent
+  summary: Get all collector agents
+  operationId: getAllCollectorAgents
+  parameters:
+    - name: page
+      in: query
+      description: page number
+      required: false
+      schema:
+        type: integer
+        example: 1
+
+    - name: limit
+      in: query
+      description: page size
+      required: false
+      schema:
+        type: integer
+        example: 20
+  responses:
+    "200":
+      description: CollectorAgents
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/collector_agent.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

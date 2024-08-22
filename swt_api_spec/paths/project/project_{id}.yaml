@@ -1,0 +1,100 @@
+get:
+  tags:
+    - Project
+  description: Returns Project based on its id
+  summary: Find project by id
+  operationId: getProjectById
+  parameters:
+    - in: path
+      name: id
+      description: project id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  security:
+    - BearerAuth: []
+  responses:
+    "200":
+      description: Project
+      content:
+        "*/*":
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/project.yaml
+    "404":
+      description: Project not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "400":
+      description: Bad request
+# update project
+put:
+  tags:
+    - Project
+  description: Update a project
+  summary: Update a project by id
+  operationId: updateProjectById
+  security:
+    - BearerAuth: []
+  parameters:
+    - in: path
+      name: id
+      description: "The unique project Identifier"
+      required: true
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/project.yaml"
+  responses:
+    "200":
+      description: Project updated
+    "404":
+      description: Project not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "400":
+      description: Bad request
+
+delete:
+  tags:
+    - Project
+  description: Delete a project
+  summary: Delete a project by id
+  operationId: deleteProjectById
+  parameters:
+    - in: path
+      name: id
+      description: project id
+      required: true
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  security:
+    - BearerAuth: []
+  responses:
+    "200":
+      description: Project deleted
+    "404":
+      description: Project not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "400":
+      description: Bad request

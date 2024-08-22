@@ -1,0 +1,69 @@
+# create a transaction
+post:
+  tags:
+    - Transaction
+  summary: create a transaction
+  description: create a transaction
+  operationId: createTransaction
+  security:
+    - BearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/transaction.yaml
+  responses:
+    "201":
+      description: transaction created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+
+# get all transaction
+get:
+  tags:
+    - Transaction
+  summary: get all transaction
+  description: get all transaction
+  operationId: getAllTransaction
+  security:
+    - BearerAuth: []
+  parameters:
+    - name: market_id
+      in: query
+      description: get the receipt produced during a single market
+      schema:
+        format: cuid
+        type: string
+      required: false
+    - name: page
+      in: query
+      description: page number
+      required: false
+      schema:
+        type: integer
+        example: 1
+    - name: limit
+      in: query
+      description: page size
+      required: false
+      schema:
+        type: integer
+        example: 20
+  responses:
+    "200":
+      description: transaction
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/transaction.yaml
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

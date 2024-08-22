@@ -1,0 +1,48 @@
+#  get the campaign stock for specific campaign
+get:
+  tags:
+    - Camoaign_stock
+  summary: Get campaign stock by campaign id
+  description: get the campaign stock for specific campaign by campaign id
+  operationId: getCampaignStock
+  parameters:
+    - name: campaign_id
+      in: path
+      description: campaign id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+    - name: company_id
+      in: query
+      description: the identifier of specific company for which we need the stock
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      required: false
+    - name: limit
+      in: query
+      description: Limit the number of results returned
+      schema:
+        type: integer
+        example: 10
+      required: false
+    - name: skip
+      in: query
+      description: the number of results to fetch for data base par page
+      schema:
+        type: integer
+        example: 0
+      required: false
+  responses:
+    "200":
+      description: campaign stock
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/campaign_stock.yaml
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access

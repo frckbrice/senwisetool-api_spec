@@ -1,0 +1,30 @@
+#get specific training
+get:
+  tags:
+    - Training
+  summary: Get specific training
+  operationId: getTraining
+  parameters:
+    - in: path
+      name: id
+      description: training id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: training
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/training.yaml"
+    "404":
+      description: training not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access

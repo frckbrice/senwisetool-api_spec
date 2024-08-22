@@ -1,0 +1,26 @@
+# object for company subscription to plan
+type: object
+properties:
+  price_id:
+    type: string
+    readOnly: true
+    format: cuid
+    example: "dfsdfsdfsd1454f5d4f4s34fs3d"
+  company_id:
+    type: string
+    format: cuid
+    example: "dfsdfsdfsd1454f5d4f4s34fs3d"
+  start_date:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  end_date:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  status:
+    type: string
+    example: "active"
+  description:
+    description: " the specification about the subscribed plan"
+    type: string

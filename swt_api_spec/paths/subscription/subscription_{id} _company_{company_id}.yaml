@@ -1,0 +1,39 @@
+patch:
+  tags:
+    - Company
+  summary: Cancel company subscription
+  operationId: cancelCompanySubscription
+  security:
+    - BearerAuth: []
+  parameters:
+    - name: id
+      in: path
+      description: subscription id
+      required: true
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+    - name: company_id
+      in: path
+      description: company id
+      required: true
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/subscription.yaml"
+  responses:
+    "201":
+      description: company subscription cancelled
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

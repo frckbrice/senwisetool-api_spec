@@ -1,0 +1,90 @@
+# update price table for subscription
+patch:
+  tags:
+    - Price
+  summary: Update price table for subscription
+  operationId: updatePriceTable
+  parameters:
+    - in: path
+      name: id
+      description: price table id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/price_plan.yaml
+          properties:
+            unit_amount:
+              type: string
+              example: "$2000"
+
+  responses:
+    "200":
+      description: price table updated
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+
+#delete price
+delete:
+  tags:
+    - Price
+  summary: Delete price table for subscription
+  operationId: deletePriceTable
+  parameters:
+    - in: path
+      name: id
+      description: price table id
+      required: true
+      schema:
+        type: string
+        example: "gold_price_table"
+      style: simple
+  responses:
+    "200":
+      description: price table deleted
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+
+#get specific price
+get:
+  tags:
+    - Price
+  summary: Get price table for subscription
+  operationId: getPriceTable
+  parameters:
+    - in: path
+      name: id
+      description: price table id
+      required: true
+      schema:
+        type: string
+        example: "gold_price_table"
+      style: simple
+  responses:
+    "200":
+      description: price table
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/price_plan.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error

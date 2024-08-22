@@ -1,0 +1,61 @@
+post:
+  tags:
+    - Company
+  summary: Create a new company
+  operationId: createCompany
+  requestBody:
+    required: true
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          $ref: ../../components/schemas/company.yaml
+
+  responses:
+    "201":
+      description: Company created
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/company.yaml"
+    "400":
+      description: "bad request"
+    "500":
+      description: Internal server error
+
+# get the list of the companies in the system
+get:
+  tags:
+    - Company
+  summary: List all companies
+  operationId: getAllCompanies
+  security:
+    - BearerAuth: []
+  parameters:
+    - name: page
+      in: query
+      description: page number
+      required: false
+      schema:
+        type: integer
+        example: 1
+    - name: limit
+      in: query
+      description: page size
+      required: false
+      schema:
+        type: integer
+        example: 20
+  responses:
+    "200":
+      description: Company list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/company.yaml
+    "500":
+      description: Internal server error
+    "404":
+      description: Companies not found

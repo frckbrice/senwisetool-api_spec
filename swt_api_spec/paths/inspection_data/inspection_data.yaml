@@ -1,0 +1,48 @@
+# create inspection data
+post:
+  tags:
+    - Inspection_data
+  summary: Create inspection data
+  description: Create inspection data for each farm inspected.
+  operationId: createInspectionData
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/inspection_data.yaml"
+  responses:
+    "201":
+      description: inspection data created
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+# retrieve inspection data by id
+# get:
+#   tags:
+#     - Inspection_data
+#   summary: Get inspection data by id
+#   operationId: getInspectionData
+#   parameters:
+#     - in: path
+#       name: id
+#       description: inspection data id
+#       required: true
+#       schema:
+#         type: string
+#         example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+#       style: simple
+#   responses:
+#     "200":
+#       description: inspection data
+#       content:
+#         application/json:
+#           schema:
+#             $ref: "../../components/schemas/inspection_data.yaml"
+#     "404":
+#       description: inspection data not found
+#     "401":
+#       description: Unauthorized access

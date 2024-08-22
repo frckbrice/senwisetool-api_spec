@@ -1,0 +1,19 @@
+apis:
+  sample@v1:
+    root: swt_api_spec/senwisetool.yaml
+extends:
+  - recommended
+rules:
+  no-unused-components: error
+  no-server-example.com: off
+theme:
+  openapi:
+    htmlTemplate: ./docs/index.html
+    theme:
+      colors:
+        primary:
+          main: "#32329f"
+    generateCodeSamples:
+      languages:
+        - lang: JavaScript
+        - lang: Node.js

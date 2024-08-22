@@ -1,0 +1,58 @@
+# project object to be store in the
+type: object
+properties:
+  id:
+    description: the unique identifier of the project created by a company.
+    type: string
+    format: cuid
+    readOnly: true
+  type:
+    description: the type of the project created by a company.
+    type: string
+    format: array
+    items:
+      type: string
+      enum: ["internal_inspection", "external_inpection", "auto_survery"]
+  company_id:
+    description: the companies ID to which the project belongs to.
+    type: string
+    format: cuid
+    example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+  title:
+    description: the title of the project
+    type: string
+    example: "internal inspection"
+  description:
+    description: the description of the project
+    type: string
+    example: "internal inspection"
+  sector_of_activity:
+    description: the sector of activity of the project
+    type: string
+    example: "engineering"
+  country:
+    description: the country of the project
+    type: string
+    example: "france"
+  status:
+    type: string
+    format: array
+    description: the status of the project
+    example: ["active", "inactive"]
+    required:
+      - active
+      - inactive
+  start_date:
+    description: the start date of the project
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  end_date:
+    description: the end date of the project
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  project_structure:
+    description: the former structure of the project
+    type: string
+    example: "internal inspection"

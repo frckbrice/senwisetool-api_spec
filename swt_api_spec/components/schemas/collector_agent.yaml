@@ -1,0 +1,20 @@
+#the collector agent data to be store through the api $anchor:
+type: object
+properties:
+  id:
+    description: the identifier for the collector agent
+    type: string
+    format: cuid
+    readOnly: true
+  code:
+    description: a random code assigned to the collector agent for specific project
+    type: string
+    format: string
+  name:
+    description: the name of the collector agent
+    type: string
+  company_id:
+    description: the company_id from which the collector agent belongs to and collects data for the project.
+    type: string
+    format: cuid
+    readOnly: true

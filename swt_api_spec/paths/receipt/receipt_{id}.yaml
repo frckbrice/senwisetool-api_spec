@@ -1,0 +1,43 @@
+# get a specific receipt by its id
+get:
+  tags:
+    - Receipt
+  summary: Get receipt by Id
+  description: Get receipt by Id. and also we can get all the receipts produced during a specific market and by a specific company.
+  operationId: getReceiptById
+  security:
+    - BearerAuth: []
+  parameters:
+    - in: path
+      name: id
+      description: receipt id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+    - in: query
+      name: market_id
+      description: get receipt corresponding to a specific market.
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+  responses:
+    "200":
+      description: receipt
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/receipt.yaml"
+    "404":
+      description: receipt not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access

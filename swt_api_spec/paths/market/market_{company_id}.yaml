@@ -1,0 +1,54 @@
+# get all the market done by a specific company
+get:
+  tags:
+    - Market
+  summary: Get all the market done by a specific company
+  operationId: getMarketByCompany
+  parameters:
+    - name: company_id
+      in: path
+      description: company id
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+          example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+    - in: query
+      name: limit
+      description: limit
+      required: false
+      schema:
+        type: integer
+        example: 10
+      style: simple
+    - in: query
+      name: offset
+      description: offset
+      required: false
+      schema:
+        type: integer
+        example: 0
+      style: simple
+  responses:
+    "200":
+      description: market
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/market.yaml"
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "500":
+      description: internal server error
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "#/components/schemas/Error"
+  security:
+    - BearerAuth: []

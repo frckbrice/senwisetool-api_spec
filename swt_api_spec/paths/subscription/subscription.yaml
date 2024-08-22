@@ -1,0 +1,18 @@
+post:
+  tags:
+    - Company
+  summary: Subscribe company to an offer plan
+  operationId: subscribeCompanyToOfferPlan
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/subscription.yaml"
+  responses:
+    "201":
+      description: company subscribed to an offer plan
+    "500":
+      description: internal server error
+    "400":
+      description: Invalid Input

@@ -1,0 +1,22 @@
+# the market audit to keep track of the user of the cmpany who was in charge of the market role at that period
+type: object
+properties:
+  id:
+    description: the unique identifier of the company.
+    type: string
+    format: cuid
+    readOnly: true
+  company_id:
+    description: the identifier of the concerned company
+    type: string
+    format: cuid
+    readOnly: true
+  user_id:
+    description: the id of the user in charge of the market
+    type: string
+    format: cuid
+    readOnly: true
+  date:
+    type: string
+    format: date-time
+    description: the date of the market took place

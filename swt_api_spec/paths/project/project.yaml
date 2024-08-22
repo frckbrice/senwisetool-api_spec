@@ -1,0 +1,73 @@
+# list all users
+get:
+  tags:
+    - Project
+  description: Get projects of a company
+  summary: get all project done by this company by archived, active, draft
+  operationId: getAllProjectsByCompany
+  security:
+    - BearerAuth: []
+  parameters:
+    - name: company_id
+      in: query
+      description: company id
+      required: false
+      schema:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+      style: simple
+    - in: query
+      name: archived
+      description: archived projects
+      required: false
+      schema:
+        type: boolean
+        example: true
+      style: simple
+    - in: query
+      name: active
+      description: active projects
+      required: false
+      schema:
+        type: boolean
+        example: true
+      style: simple
+    - name: draft
+      in: query
+      description: draft projects
+      required: false
+      schema:
+        type: boolean
+        example: true
+      style: simple
+    - name: skip
+      in: query
+      description: number of items to skip
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: limit
+      in: query
+      description: max records to return
+      required: true
+      schema:
+        type: integer
+        format: int32
+  responses:
+    "200":
+      description: Project
+      content:
+        "*/*":
+          schema:
+            type: array
+            items:
+              $ref: "../../components/schemas/project.yaml"
+    "404":
+      description: Project not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access
+    "400":
+      description: Bad request

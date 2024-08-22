@@ -1,0 +1,74 @@
+post:
+  tags:
+    - Farm
+  summary: Create a new farm for a specific farmer
+  operationId: createFarm
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/farm.yaml"
+  responses:
+    "201":
+      description: Farm created
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/farm.yaml"
+    "400":
+      description: "bad request"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Invalid input data"
+    "401":
+      description: "Unauthorized"
+    "403":
+      description: "Forbidden"
+    "500":
+      description: internal server error
+
+# get all the farms
+get:
+  tags:
+    - Farm
+  summary: list all the farm supervised by the company.
+  description: Get all farms
+  operationId: getAllFarms
+  parameters:
+    - name: limit
+      in: query
+      description: number of resource to fetch
+      required: false
+      schema:
+        type: integer
+    - name: skip
+      in: query
+      description: number of page to skip
+      required: false
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: farms
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/farm.yaml
+    "400":
+      description: "bad request"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Invalid input data"
