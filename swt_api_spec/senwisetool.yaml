@@ -6,21 +6,24 @@ info:
   contact:
     email: senmima-support@senima.com
     url: "http://senwisetool.com/contact"
+    name: senmima
+
   license:
     name: Apache 2.0
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
-    url: "https://redocly.github.io/openapi-template/logo.png"
+    url: "https://zfmlvubvatipllsqsehh.supabase.co/storage/v1/object/sign/my_blog_stuffs/senwiseTool.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJteV9ibG9nX3N0dWZmcy9zZW53aXNlVG9vbC5wbmciLCJpYXQiOjE3MjQzNDk5NDgsImV4cCI6MTg4MjAyOTk0OH0.wx1eEMRztMVBPWk1LVWMISbUC2VJmUFEirubfzcqGGc&t=2024-08-22T18%3A05%3A49.101Z"
   description: >
-    This is an **example** API to demonstrate features of the OpenAPI specification.
+    THE API SPECIFICATION FOR **SENWISETOOL** PROJECT.
+
 
     # description
 
-    This API definition is intended to to be a good starting point for developers and consumers of the OpenAPI Specification based on REST-API. It implements the senwisetool project contract between the two teams, front-end and backend.
+    This API definition is intended to to be a good starting point for developers and consumers of the **sendwisetool** project based on REST-API. It represents a sort of contract between the two teams, front-end and backend of the project.
 
-    I allows humans and computers to discover and understand the capabilities of the service without access to source
-    code, documentation, or through network traffic inspection. When properly
-    defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming.
+    I allows every stakeholder (Human and computer) to discover and understand the capabilities of the service without access to source
+    code, documentation, or through network traffic inspection. 
+    When properly defined, any team member can understand and interact with the remote service with a minimal amount of implementation logic.
 externalDocs:
   description: "corresponding repository for the project"
   url: "https://github.com/frckbrice/senwisetool-project-backend"

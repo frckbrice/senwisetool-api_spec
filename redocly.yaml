@@ -1,5 +1,5 @@
 apis:
-  sample@v1:
+  senwisetool@v1:
     root: swt_api_spec/senwisetool.yaml
 extends:
   - recommended
