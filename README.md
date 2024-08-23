@@ -14,7 +14,7 @@ __table of content__
     git clone git@github.com:frckbrice/senwisetool-api_spec.git
   ```
 
-- Navigate to project with from your terminal
+- Navigate to project with from your terminal; the target is to access the senwisetool.yaml file for build.
 
   ```bash
     cd senwisetool-api_spec/swt_api_spec
