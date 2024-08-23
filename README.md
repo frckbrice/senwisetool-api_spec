@@ -24,7 +24,7 @@ __table of content__
 
 <!-- - Install Redoc CLI with the command `npm i redoc-cli -g` -->
 
-- Start local server for the spec in watch mode
+- Start local server for the spec in watch mode (you could just enter cd swt_api_apec && redocly build-docs senwisetool-api_spec.yaml)
 
     ```bash
       - npm install -g @redocly/cli@latest
