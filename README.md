@@ -11,66 +11,41 @@ __table of content__
 - Clone repo with
   
   ```bash
-    git clone git@github.com:kraulain/rbclean-infra.git
+    git clone git@github.com:frckbrice/senwisetool-api_spec.git
   ```
 
 - Navigate to project with from your terminal
 
   ```bash
-    cd rbclean-infra
+    cd senwisetool-api_spec
   ```
 
 ## How to render the documentation
 
-<!-- - Install Redoc CLI with the command `npm i redoc-cli g` -->
+<!-- - Install Redoc CLI with the command `npm i redoc-cli -g` -->
 
 - Start local server for the spec in watch mode
 
     ```bash
-      npm run dev
+      - npm install
+      - redocly build-docs senwisetool-api_spec.yaml
+      - redocly preview-docs senwisetool-api_spec.yaml
     ```
-
-- Create a deployable zero-dependency HTML file
-
-- Generate the html with
-
-    ```bash
-      npm run build:html
-    ```
-
-## Contributing
-
-- Branches should be name with `feature/<task>` format
-
-- Writing commits
-  - Commit messages should follow the for mat `#<issue_number> | <author_name> | <work_description>`
-
-  - @example is `#1 | Kraulain | create empty repo`
-
-  - The numbering is with respect to the issue number your are working on
-
-- When creating a `PR`;
-
-  - If that pr is for an existing `issue`, be sure to tag the issue in the PR description, to auto-close the issue if it's approved, you can use any of these commands
-
-    - `Resolves #<issue_number>`
-
-    - `Fixes #<issue_number>` or
-
-    - `Closes #<issue_number>`
-  
-  - Always assign the PR to yourself and your team-mate
 
 - ### API tags
 
-  - Auth
   - Users
-  - Orders
-  - Notifications
-  - Reports
+  - Projects
+  - Subscriptions
+  - Farms
+  - Training
+  - Companies
+  - Markets
+  - Transactions
+  - project_audits
+  - Market_audits
+  - Collector_agent
+  - ...
 
-|
-
-___
-
-__Happy Coding 🚀__
+-WIP (Work in Progress)
+__Thanks 🚀__
