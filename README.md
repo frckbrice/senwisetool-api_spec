@@ -48,5 +48,6 @@ __table of content__
   - ...
 __
 
--WIP (Work in Progress)
+
+### WIP (Work in Progress)
 __Thanks 🚀__
