@@ -17,19 +17,19 @@ __table of content__
 - Navigate to project with from your terminal
 
   ```bash
-    cd senwisetool-api_spec
+    cd senwisetool-api_spec/swt_api_spec
   ```
 
 ## How to render the documentation
 
 <!-- - Install Redoc CLI with the command `npm i redoc-cli -g` -->
 
-- Start local server for the spec in watch mode (you could just enter cd swt_api_apec && redocly build-docs senwisetool-api_spec.yaml)
+- Start local server for the spec in watch mode (you could just enter cd swt_api_apec && redocly build-docs senwisetool.yaml)
 
     ```bash
       - npm install -g @redocly/cli@latest
-      - redocly build-docs ./swt_api_spec/senwisetool-api_spec.yaml
-      - redocly preview-docs ./swt_api_spec/senwisetool-api_spec.yaml
+      - redocly build-docs senwisetool.yaml
+      - redocly preview-docs senwisetool.yaml
     ```
 
 - ### API tags
