@@ -27,9 +27,9 @@ __table of content__
 - Start local server for the spec in watch mode
 
     ```bash
-      - npm install
-      - redocly build-docs senwisetool-api_spec.yaml
-      - redocly preview-docs senwisetool-api_spec.yaml
+      - npm install -g @redocly/cli@latest
+      - redocly build-docs ./swt_api_spec/senwisetool-api_spec.yaml
+      - redocly preview-docs ./swt_api_spec/senwisetool-api_spec.yaml
     ```
 
 - ### API tags
