@@ -1,5 +1,7 @@
 # senwisetool-project
 
+![dislay image](docs/swt-project-image.png)
+
 __table of content__
 
 - [local setup](#setup-repo-locally)
@@ -46,7 +48,6 @@ __table of content__
   - Market_audits
   - Collector_agent
   - ...
-__
 
 
 ### WIP (Work in Progress)
