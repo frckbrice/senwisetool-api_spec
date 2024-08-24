@@ -1,7 +1,7 @@
 post:
   tags:
     - Company
-  description: Assign role to a user of a company
+  description: Assign role to a user of a company. This operation is not allowed only for ADG or PDG.
   summary: Assign role to a user of a company
   operationId: assignRoleToUser
   parameters:
@@ -10,11 +10,11 @@ post:
       description: company id
       required: true
       schema:
-        type: array
-        items:
-          type: string
-          example: AQA9CNo0cXNLt6sZp5Uc5P0
-          style: simple
+        # type: array
+        # items:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
+        style: simple
 
     - in: path
       name: user_id
@@ -35,7 +35,6 @@ post:
         style: simple
   security:
     - BearerAuth: []
-    - BasicAuth: []
   responses:
     "200":
       description: Company

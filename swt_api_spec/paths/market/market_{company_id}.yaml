@@ -3,6 +3,7 @@ get:
   tags:
     - Market
   summary: Get all the market done by a specific company
+  description: To get all the market done by a specific company. Only administrators can use this operation.
   operationId: getMarketByCompany
   parameters:
     - name: company_id

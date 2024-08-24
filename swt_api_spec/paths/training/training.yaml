@@ -2,8 +2,9 @@
 post:
   tags:
     - Training
-  summary: create a training data
+  summary: Create a training data
   operationId: createTraining
+  description: To create a training data. This information is used in the company dashboard to display all the training data. Only administrators can use this operation.
   requestBody:
     required: true
     content:
@@ -26,8 +27,9 @@ post:
 get:
   tags:
     - Training
-  summary: get all training data
+  summary: Get all training data
   operationId: getAllTraining
+  description: To get all training data. Only administrators can use this operation. If you want to get all training data, use the **getAllTraining** operation.
   parameters:
     - name: skip
       in: query

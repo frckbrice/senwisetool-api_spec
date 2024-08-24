@@ -1,0 +1,11 @@
+description: "To specify user profile with admin permissions. This type of user is also referred to as an **administrator**."
+allOf:
+  - $ref: user.yaml
+  - type: object
+    properties:
+      userType:
+        type: string
+        enum:
+          - ADG
+          - MEMBER
+        default: ADG

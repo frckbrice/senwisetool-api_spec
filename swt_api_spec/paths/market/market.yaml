@@ -4,6 +4,7 @@ post:
     - Market
   summary: Create a market
   operationId: createMarket
+  description: To create a market. This information is used in the company dashboard to display all the markets. Only administrators can use this operation.
   security:
     - BearerAuth: []
   requestBody:
@@ -28,6 +29,7 @@ get:
     - Market
   summary: Get all markets
   operationId: getAllMarkets
+  description: To get all markets. Only administrators can use this operation. If you want to get all markets, use the **getAllMarkets** operation.
   security:
     - BearerAuth: []
   responses:

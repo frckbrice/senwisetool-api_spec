@@ -4,6 +4,7 @@ get:
     - User
   summary: Get user by id
   operationId: getUserById
+  description: To get a single user by id. Only administrators can use this operation. If you want to get a single user by id, use the **getUserById** operation.
   security:
     - BearerAuth: []
   parameters:
@@ -13,7 +14,7 @@ get:
       required: true
       schema:
         type: integer
-        example: 1
+        example: djfdjsbhvbhsv62656FDOF(*)
 
   responses:
     "200":
@@ -30,11 +31,12 @@ put:
   tags:
     - User
   summary: Update user by id
+  description: modify some information concerning the user.
   operationId: updateUserById
   parameters:
     - name: id
       in: path
-      description: user id#+
+      description: The ID of the user to be updated.
       required: true
       schema:
         type: string

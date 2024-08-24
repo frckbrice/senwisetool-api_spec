@@ -3,6 +3,7 @@ post:
   tags:
     - Project_audit
   summary: Create a project audit object
+  description: To create the project audit object data to keep track of the company user in charge of conducting the project.
   operationId: createProjectAudit
   requestBody:
     required: true

@@ -6,8 +6,8 @@ properties:
     type: string
     format: cuid
     readOnly: true
-  company_id:
-    description: the identifier of the concerned company
+  market_id:
+    description: the identifier of the concerned market that was handled by the company user.
     type: string
     format: cuid
     readOnly: true
@@ -20,3 +20,4 @@ properties:
     type: string
     format: date-time
     description: the date of the market took place
+    example: "2020-01-01T00:00:00Z"

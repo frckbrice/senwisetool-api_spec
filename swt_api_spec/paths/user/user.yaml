@@ -2,7 +2,7 @@ post:
   tags:
     - User
   summary: user stored after registration from clerk.
-  description: after registration from clerk the user object is sent to the database to be stored.
+  description: The user object that is stored to the system after being authenticated by the third party authentication system.
   operationId: createUser
 
   requestBody:
@@ -12,16 +12,14 @@ post:
           type: object
           properties:
             schema:
-              $ref: ../../components/schemas/user.yaml
-              example:
-                username: user1
-                email: user@example.com
-                password: 123456
-                first_name: John
-                last_name: Doe
-                role: user
-                company_id: mffbdbjdvdv4343235353J%#J%J@BJJH#52
-                phone_number: 1234567890
+              discriminator:
+                propertyName: userType
+                mapping:
+                  admin: "../../components/schemas/admin.yaml"
+                  basic: "../../components/schemas/member.yaml"
+              anyOf:
+                - $ref: "../../components/schemas/admin.yaml"
+                - $ref: "../../components/schemas/member.yaml"
   responses:
     "201":
       description: User created
@@ -29,12 +27,13 @@ post:
         application/json:
           schema:
             $ref: ../../components/schemas/user.yaml
-    "400":
-      description: "bad request"
+    "422":
+      description: "Unprocessable Entity"
     "500":
       description: Internal server error
   security:
     - BearerAuth: []
+
 # list all the users in the
 get:
   tags:
@@ -60,19 +59,22 @@ get:
         example: 20
     - name: status
       in: query
-      description: user status
+      description: "One or more user status values by which to look up user accounts."
       required: true
+      style: form
+      explode: false
       schema:
-        type: string
-        example: employee
+        type: array
         uniqueItems: true
+        minItems: 1
+        maxItems: 3
         items:
           type: string
           enum:
-            - employee
-            - administrator
-            - farmer
-            - auditor
+            - active
+            - banned
+            - inactive
+          default: active
   responses:
     "200":
       description: User list

@@ -3,6 +3,7 @@ delete:
   tags:
     - CollectorAgent
   summary: Delete collector agent
+  description: the collector agent could be deleted at any moment by the company administrator.
   operationId: deleteCollectorAgent
   parameters:
     - in: path
@@ -10,10 +11,10 @@ delete:
       description: collector agent id
       required: true
       schema:
-        type: array
-        items:
-          type: string
-          example: AQA9CNo0cXNLt6sZp5Uc5P0
+        # type: array
+        # items:
+        type: string
+        example: AQA9CNo0cXNLt6sZp5Uc5P0
       style: simple
   responses:
     "200":

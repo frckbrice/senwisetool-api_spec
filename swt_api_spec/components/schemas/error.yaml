@@ -1,0 +1,17 @@
+# the error object
+type: Object
+properties:
+  message:
+    type: string
+    description: "The message of the error"
+    example: "The farm does not exist"
+  statusText:
+    type: string
+    description: "The code of the error"
+    example: "FARM_NOT_FOUND"
+  code:
+    type: number
+    description: "The status of the error"
+    example: 404
+    minimun: 100
+    maximum: 599

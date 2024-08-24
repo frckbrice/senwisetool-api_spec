@@ -10,7 +10,7 @@ properties:
     type: string
     format: cuid
     description: "the project from which the inspection is donne"
-  project_date:
+  project_data:
     type: object
     format: json
     description: "the data from the fields of the project"
@@ -25,3 +25,13 @@ properties:
   collected_at:
     type: string
     format: date-time
+  created_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the inspection data was created"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the inspection data was updated"

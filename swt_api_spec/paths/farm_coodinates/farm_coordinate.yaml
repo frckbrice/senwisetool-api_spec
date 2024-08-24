@@ -1,8 +1,9 @@
 post:
   tags:
-    - Farm
+    - Farm_coodinates
   summary: Update farm coordinate
   operationId: updateFarmCoordinate
+  description: To update farm coordinate. Only administrators can use this operation. If you want to update farm coordinate, use the **updateFarmCoordinate** operation.
   security:
     - BearerAuth: []
   requestBody:

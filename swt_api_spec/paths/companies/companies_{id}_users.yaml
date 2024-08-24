@@ -15,10 +15,8 @@ get:
             type: string
             example: AQA9CNo0cXNLt6sZp5Uc5P0
         style: simple
-        security:
-          - BearerAuth: []
-          - BasicAuth: []
-
+  security:
+    - BearerAuth: []
   responses:
     "200":
       description: Company

@@ -3,6 +3,7 @@ post:
     - Price
   summary: Create price table for subscription
   operationId: createPriceTable
+  description: To create price table for subscription. Only administrators can use this operation. If you want to create price table for subscription, use the **createPriceTable** operation.
   requestBody:
     required: true
     content:
@@ -24,6 +25,7 @@ get:
     - Price
   summary: Get all price
   operationId: getAllPrice
+  description: To get all price. Only administrators can use this operation. If you want to get all price, use the **getAllPrice** operation.
   responses:
     "200":
       description: price

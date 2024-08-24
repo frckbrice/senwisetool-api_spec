@@ -26,15 +26,15 @@ properties:
     format: date-time
     example: "2022-10-10T00:00:00.000Z"
     description: "The date of the receipt."
-  net_weight:
+  net_weight_in_kg:
     type: number
     example: 100
     description: "The net weight of the receipt."
-  quantity:
+  quantity_in_bags:
     type: number
     example: 10
     description: "The quantity of the receipt."
-  humidity_level:
+  humidity_level_of_product:
     type: number
     format: float
     example: 10
@@ -43,13 +43,13 @@ properties:
     type: number
     example: 100
     description: "The net weight of the receipt for sale."
-  refraction:
+  refraction_humidity_or_quality:
     type: number
     format: float
     example: 10
     description: "The refraction of the receipt."
     readOnly: true
-  unit_amount:
+  unit_amount_per_kg:
     type: number
     example: 100 per kg
     description: "The unit amount of the receipt."
@@ -65,15 +65,16 @@ properties:
     example: "USD"
     description: "The currency of the receipt."
     readOnly: true
-  image_url:
+  farmer_picture_urls:
     type: string
-    example: "https://senima.com/wp-content/uploads/2022/01/gold.png"
-    description: "The image url of the receipt."
+    format: array
+    example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
+    description: "To store the images of the farmer with his product"
     readOnly: true
   statutory_prerequisite:
     type: number
     example: 10
-    description: "The statutory prerequisite of the receipt."
+    description: "To specify the statutory_prerequisite value predefined between the farmer and company."
     readOnly: true
   net_paid:
     type: number
@@ -88,8 +89,13 @@ properties:
     type: string
     description: "The company signature of the receipt."
     readOnly: true
-  farmer_image_url:
+  product_name:
     type: string
-    description: "The farmer image url of the receipt."
+    example: "Cocoa"
+    description: "To specify the product name defined in the receipt."
     readOnly: true
-    example: "https://senima.com/wp-content/uploads/2022/01/gold.png"
+  receipt_number:
+    type: string
+    example: "12558"
+    description: "The unique Id of the delivery receipt."
+    readOnly: true

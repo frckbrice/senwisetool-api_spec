@@ -4,6 +4,7 @@ get:
     - Subscription
   summary: Get subscription by id
   operationId: getSubscriptionById
+  description: To get a specific subscription by id. Only administrators can use this operation. If you want to get a specific subscription by id, use the **getSubscriptionById** operation.
   parameters:
     - name: id
       in: path

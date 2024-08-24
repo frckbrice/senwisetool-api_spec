@@ -15,8 +15,8 @@ post:
   responses:
     "201":
       description: CollectorAgent created
-    "400":
-      description: "bad request"
+    "422":
+      description: "Unprocessable Entity"
     "401":
       description: "Unauthorized"
     "403":
@@ -30,6 +30,7 @@ get:
     - CollectorAgent
   summary: Get all collector agents
   operationId: getAllCollectorAgents
+  description: To get all collector agents. Only administrators can use this operation. If you want to get all collector agents, use the **getAllCollectorAgents** operation.
   parameters:
     - name: page
       in: query

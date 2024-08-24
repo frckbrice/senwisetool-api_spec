@@ -13,6 +13,8 @@ properties:
   weight:
     type: string
     description: the weight use to mesure the stock
+    format: int32
+    example: 5kg
   campaign_id:
     type: string
     format: cuid
@@ -22,3 +24,16 @@ properties:
     type: string
     format: cuid
     example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+  unit_of_mesure:
+    description: The unit used to mesure the stock
+    type: integer
+    format: int32
+    example: 5 Ton, 5kg
+  created_at:
+    type: string
+    format: date-time
+    description: the date and time when the stock was created
+  updated_at:
+    type: string
+    format: date-time
+    description: the date and time when the stock was updated

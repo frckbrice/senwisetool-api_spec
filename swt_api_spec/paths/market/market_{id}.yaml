@@ -4,6 +4,7 @@ get:
     - Market
   summary: Get market by id
   operationId: getMarketById
+  description: To get a specific market by id. Only administrators can use this operation. If you want to get a specific market by id, use the **getMarketById** operation.
   security:
     - BearerAuth: []
   parameters:
@@ -37,6 +38,7 @@ put:
     - Market
   summary: Update market
   operationId: updateMarket
+  description: To update a market by id. Only administrators can use this operation. If you want to update a market, use the **updateMarket** operation.
   parameters:
     - in: path
       name: id
@@ -73,6 +75,7 @@ delete:
     - Market
   summary: Delete market
   operationId: deleteMarket
+  description: To delete a market by id. Only administrators can use this operation. If you want to delete a market, use the **deleteMarket** operation.
   parameters:
     - in: path
       name: id

@@ -3,6 +3,7 @@ get:
     - Farm
   summary: Get farm by id
   operationId: getFarmById
+  description: To get a farm by its ID. Only administrators can use this operation. If you want to get a farm by its ID, use the **getFarmById** operation.
   parameters:
     - in: path
       name: id
@@ -26,11 +27,13 @@ get:
     "403":
       description: Forbidden access
 
+# delete a farm by ID.
 delete:
   tags:
     - Farm
   summary: Delete farm by id
   operationId: deleteFarmById
+  description: To delete a farm by its ID. Only administrators can use this operation. If you want to delete a farm by its ID, use the **deleteFarmById** operation.
   parameters:
     - in: path
       name: id
@@ -56,6 +59,7 @@ patch:
     - Farm
   summary: Update farm by id
   operationId: updateFarmById
+  description: To update a farm by its ID. Only administrators can use this operation. If you want to update a farm by its ID, use the **updateFarmById** operation.
   parameters:
     - name: id
       in: path

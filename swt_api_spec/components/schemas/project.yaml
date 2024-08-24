@@ -12,7 +12,10 @@ properties:
     format: array
     items:
       type: string
-      enum: ["internal_inspection", "external_inpection", "auto_survery"]
+      required:
+        - INITIAL_INSPECTION
+        - EXTERNAL_INSPECTION
+        - AUTO_EVALUATION
   company_id:
     description: the companies ID to which the project belongs to.
     type: string
@@ -26,33 +29,76 @@ properties:
     description: the description of the project
     type: string
     example: "internal inspection"
-  sector_of_activity:
+  sector_activity:
     description: the sector of activity of the project
     type: string
     example: "engineering"
   country:
     description: the country of the project
     type: string
-    example: "france"
+    example: "Cameroon"
   status:
     type: string
     format: array
-    description: the status of the project
-    example: ["active", "inactive"]
+    description: The status of the project
+    example: ["active", "draft", "archived"]
     required:
-      - active
-      - inactive
+      - ARCHIVED
+      - DRAFT
+      - ACTIVE
+      - INACTIVE
   start_date:
-    description: the start date of the project
+    description: The start date of the project
     type: string
     format: date-time
     example: "2022-10-10T00:00:00.000Z"
   end_date:
-    description: the end date of the project
+    description: The end date of the project
     type: string
     format: date-time
     example: "2022-10-10T00:00:00.000Z"
   project_structure:
-    description: the former structure of the project
+    description: The former structure of the project
     type: string
-    example: "internal inspection"
+    format: object
+    example:
+      {
+        title: string,
+        description: string,
+        start_date: string,
+        end_date: string,
+        status: string,
+        ...,
+      }
+  archived:
+    type: boolean
+    description: To set the project as archived.
+  draft:
+    type: boolean
+    description: set project as draft.
+  created_at:
+    type: string
+    format: date-time
+    description: The date and time when the project was created.
+    example: "2022-10-10T00:00:00.000Z"
+  updated_at:
+    type: string
+    format: date-time
+    description: The date and time when the project was updated.
+    example: "2022-10-10T00:00:00.000Z"
+  deleted_at:
+    type: string
+    format: date-time
+    description: The date and time when the project was deleted.
+  slug:
+    type: string
+    description: the slug of the project title
+    example: "internal_inspection_for_local_farmers"
+  archived_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  draft_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"

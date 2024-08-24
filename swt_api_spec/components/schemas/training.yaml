@@ -9,16 +9,13 @@ properties:
   theme:
     type: string
     description: the theme for the training programming
-  title:
-    type: string
-    description: the title for the training
-  content:
-    type: string
-    description: the content of the training
-  date:
+  end_date:
     type: string
     format: date-time
-  locality:
+  start_date:
+    type: string
+    format: date-time
+  location:
     type: string
     description: the locality of the training
   company_id:
@@ -26,7 +23,7 @@ properties:
     format: cuid
     description: the company id of the training
     example: 1jssbbjsbjsbjs221878dd817dd87sd
-  traning_report:
+  training_attendance_sheet_url:
     type: string
     description: the report of the training
   training_picture_url:
@@ -34,3 +31,7 @@ properties:
     format: array
     description: the images of the training
     example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
+  modules:
+    type: string
+    format: array
+    description: The modules of the training program  to be used in the training.

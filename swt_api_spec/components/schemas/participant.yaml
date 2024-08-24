@@ -18,3 +18,13 @@ properties:
   signature:
     type: string
     description: "pthe signature of the participant"
+  created_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the participant was created"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the participant was updated"

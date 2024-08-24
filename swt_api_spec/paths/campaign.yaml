@@ -36,6 +36,7 @@ get:
   tags:
     - Campaign
   summary: List all campaigns
+  description: To list all campaigns in the system. This information is used in the company dashboard to display all the campaigns. Only administrators can use this operation. If you want to get all the campaigns in the system, use the **getAllCampaigns** operation.
   operationId: getAllCampaigns
   security:
     - BearerAuth: []
