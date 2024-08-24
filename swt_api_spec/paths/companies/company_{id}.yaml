@@ -33,7 +33,7 @@ get:
 delete:
   tags:
     - Company
-  description: Delete a company
+  description: To delete a company by id. Only administrators can use this operation.
   summary: Delete a company by id
   operationId: deleteCompanyById
   parameters:

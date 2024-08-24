@@ -4,6 +4,7 @@ patch:
     - Price
   summary: Update price table for subscription
   operationId: updatePriceTable
+  description: To update price table for subscription. Only administrators can use this operation.
   parameters:
     - in: path
       name: id
@@ -41,10 +42,11 @@ delete:
     - Price
   summary: Delete price table for subscription
   operationId: deletePriceTable
+  description: To delete price table for subscription. Only administrators can use this operation.
   parameters:
     - in: path
       name: id
-      description: price table id
+      description: To delete price table for subscription by id
       required: true
       schema:
         type: string
@@ -66,6 +68,7 @@ get:
     - Price
   summary: Get price table for subscription
   operationId: getPriceTable
+  description: To get price table for subscription. Only administrators can use this operation. If you want to get price table for subscription, use the **getPriceTable** operation.
   parameters:
     - in: path
       name: id

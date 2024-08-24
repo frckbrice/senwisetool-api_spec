@@ -18,16 +18,22 @@ properties:
     format: cuid
     description: "The unique Id of the farm related to specific farm coordinate."
   located_at:
-    type: point
-    format: object
-    description: "The geographical coordinates of the farm."
+    type: object
+    format: string
+    properties:
+      lat:
+        type: number
+        description: "The latitude of the farm coordinate."
+      lng:
+        type: number
+        description: "The longitude of the farm coordinate."
+    description: "The geographical coordinates of the farm coordinate."
   coordinates:
-    type: point
+    type: object
     format: array
     description: "The list of all the geographical coodinates representing the farm total surface area."
     items:
-      type: point
-      format: float
+      type: number
       properties:
         lat:
           type: number

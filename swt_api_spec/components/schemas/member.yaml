@@ -1,0 +1,10 @@
+description: "To specify a user with basic (restricted) permissions. In total, there are 5 permission levels, but basic users can only use the first three."
+allOf:
+  - $ref: user.yaml
+  - type: object
+    properties:
+      userType:
+        type: string
+        enum:
+          - ADG
+          - MEMBER

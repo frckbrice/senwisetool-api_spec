@@ -4,6 +4,7 @@ post:
     - Market_audit
   summary: Create a market audit object
   operationId: createMarketAudit
+  description: To create a market audit between the company and the farmers. This information is used in the company dashboard to display all the market audits. Only administrators can use this operation.
   requestBody:
     required: true
     content:

@@ -33,20 +33,20 @@ properties:
   description:
     description: "To specify the description about the subscription"
     type: string
-  payment_mode: 
+  payment_mode:
     type: string
-    enum: 
-      - "Card",
-      - "Paypal",
+    enum:
+      - "Card"
+      - "Paypal"
       - "transfer"
   auto_renewal:
     type: boolean
     example: true
     description: "To specify if the subscription should be renewed automatically"
   billing_cycle:
-      type: string
-      example: "yearly"
-      description: "To specify at which rate the subscription should be billed"
+    type: string
+    example: "yearly"
+    description: "To specify at which rate the subscription should be billed"
   created_at:
     type: string
     format: date-time

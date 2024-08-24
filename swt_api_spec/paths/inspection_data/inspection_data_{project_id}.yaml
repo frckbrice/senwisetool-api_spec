@@ -3,6 +3,7 @@ get:
   tags:
     - Inspection_data
   summary: Get project inspection data by project_id
+  description: To get a specific inspection data by id. Only administrators can use this operation. If you want to get a specific inspection data by id, use the **getProjectInspectionData** operation.
   parameters:
     - name: project_id
       in: path

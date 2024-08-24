@@ -3,6 +3,7 @@ post:
     - Company
   summary: Subscribe company to an offer plan
   operationId: subscribeCompanyToOfferPlan
+  description: To subscribe a company to an offer plan. This information is used in the company dashboard to display all the subscriptions. Only administrators can use this operation.
   requestBody:
     required: true
     content:

@@ -4,6 +4,7 @@ get:
     - Training
   summary: Get specific training
   operationId: getTraining
+  description: To get a specific training by id. Only administrators can use this operation. If you want to get a specific training by id, use the **getTraining** operation.
   parameters:
     - in: path
       name: id

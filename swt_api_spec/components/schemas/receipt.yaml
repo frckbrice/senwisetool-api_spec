@@ -66,7 +66,7 @@ properties:
     description: "The currency of the receipt."
     readOnly: true
   farmer_picture_urls:
-    type: uri
+    type: string
     format: array
     example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
     description: "To store the images of the farmer with his product"

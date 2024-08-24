@@ -21,11 +21,10 @@ properties:
   last_name:
     type: string
     description: "last name of the user"
-  role:
+  title:
     type: string
     format: array
     required:
-      - PDG
       - ADG
       - MEMBER
     description: "role of the user"
@@ -37,6 +36,14 @@ properties:
     type: string
     description: "phone number of the user"
   status:
+    type: string
+    format: array
+    description: "status of the user"
+    required:
+      - active
+      - banned
+      - inactive
+  activity:
     type: string
     format: array
     description: "status of the user"

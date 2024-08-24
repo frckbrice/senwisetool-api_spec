@@ -3,7 +3,7 @@ post:
   tags:
     - Participant
   summary: create participant
-  description: create participant
+  description: To create a participant. This information is used in the company dashboard to display all the participants. Only administrators can use this operation.
   operationId: createParticipant
   security:
     - BearerAuth: []

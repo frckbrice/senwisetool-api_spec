@@ -28,6 +28,7 @@ get:
     - Requirement
   summary: Get all requirements
   operationId: getAllRequirements
+  description: To get all requirements. Only administrators can use this operation. If you want to get all requirements, use the **getAllRequirements** operation.
   responses:
     "200":
       description: requirements

@@ -3,6 +3,7 @@ patch:
     - Requirement
   summary: Update a requirement
   operationId: updateRequirement
+  description: To update a requirement. Only administrators can use this operation. If you want to update a requirement, use the **updateRequirement** operation.
   parameters:
     - name: id
       in: path
@@ -34,6 +35,7 @@ get:
     - Requirement
   summary: Get requirement by id
   operationId: getRequirement
+  description: To get a specific requirement. Only administrators can use this operation. If you want to get a specific requirement, use the **getRequirement** operation.
   parameters:
     - name: id
       in: path

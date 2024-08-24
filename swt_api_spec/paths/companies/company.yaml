@@ -30,6 +30,7 @@ get:
     - Company
   summary: List all companies
   operationId: getAllCompanies
+  description: To list all companies in the system. Only administrators can use this operation.
   security:
     - BearerAuth: []
   parameters:

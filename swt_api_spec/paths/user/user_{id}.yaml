@@ -4,6 +4,7 @@ get:
     - User
   summary: Get user by id
   operationId: getUserById
+  description: To get a single user by id. Only administrators can use this operation. If you want to get a single user by id, use the **getUserById** operation.
   security:
     - BearerAuth: []
   parameters:
