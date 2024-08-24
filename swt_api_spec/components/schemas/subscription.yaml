@@ -1,15 +1,23 @@
 # object for company subscription to plan
 type: object
 properties:
+  id:
+    type: string
+    readOnly: true
+    format: cuid
+    example: "dfsdfsdfsd1454f5d4f4s34fs3d"
+    description: To unique Id of the subscription made by a specific company.
   price_id:
     type: string
     readOnly: true
     format: cuid
     example: "dfsdfsdfsd1454f5d4f4s34fs3d"
+    description: To uniquely identify  the plan subscribed by a specific company.
   company_id:
     type: string
     format: cuid
     example: "dfsdfsdfsd1454f5d4f4s34fs3d"
+    description: To uniquely identify  the company subscribed to a plan.
   start_date:
     type: string
     format: date-time
@@ -20,7 +28,30 @@ properties:
     example: "2022-10-10T00:00:00.000Z"
   status:
     type: string
-    example: "active"
+    example: "active | inactive"
+    description: To specify the status of the subscription
   description:
-    description: " the specification about the subscribed plan"
+    description: "To specify the description about the subscription"
     type: string
+  payment_mode: 
+    type: string
+    enum: 
+      - "Card",
+      - "Paypal",
+      - "transfer"
+  auto_renewal:
+    type: boolean
+    example: true
+    description: "To specify if the subscription should be renewed automatically"
+  billing_cycle:
+      type: string
+      example: "yearly"
+      description: "To specify at which rate the subscription should be billed"
+  created_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"

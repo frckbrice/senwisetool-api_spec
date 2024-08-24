@@ -6,6 +6,10 @@ properties:
     format: cuid
     readOnly: true
     description: "The unique Id of the requirement."
+  label:
+    type: string
+    description: "To specify the label of the requirement used"
+    example: "chapter 1 | chapter 2 | chapter 3 ..."
   title:
     type: string
     description: "Title of the requirement"

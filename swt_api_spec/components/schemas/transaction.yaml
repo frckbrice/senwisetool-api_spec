@@ -29,20 +29,16 @@ properties:
     type: number
     example: 10
     description: "The quantity of the transaction."
-  unit:
-    type: string
-    example: "kg | tonne"
-    description: "The unit of the transaction."
-  net_weight_declared:
+  net_weight_declared_in_Ton:
     type: number
     example: 100
     description: "The net weight declared of the transaction."
-  humidity:
+  humidity_level_of_product:
     type: number
     format: float
     example: 10
-    description: "The humidity of the transaction."
-  quantity_of_bags:
+    description: "The humidity of the product in the transaction."
+  total_quantity_in_bags:
     type: number
     example: 10
     description: "The quantity of bags of the transaction."
@@ -50,7 +46,7 @@ properties:
     type: string
     example: "Jane Doe"
     description: "The name of the receiver."
-  mincommerce_signature:
+  min_com_verif_agent_name_and_sig:
     type: string
     example: "mincommerce_signature"
     description: "The mincommerce signature of the transaction."
@@ -66,7 +62,17 @@ properties:
     type: string
     example: "good"
     description: "The quality of the product."
-  vehicule_number:
+  vehicule_immatriculation_number:
     type: string
     example: "vehicule_number"
-    description: "The vehicule number of the transaction."
+    description: "To specify the vehicule number of the transaction. It's in charge of transporting the product from buing plan the magazin of the other third company buyer."
+  created_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "The date and time at which the transaction was created."
+  updated_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "The date and time at which the transaction was updated."

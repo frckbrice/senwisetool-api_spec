@@ -21,12 +21,12 @@ properties:
     description: "The end date of the market."
   market_number:
     type: number
-    description: "The number of the market."
+    description: "To specify the number assigned to the market by the company."
   bordereau_vente_url:
     type: string
     format: uri
-    description: "The bordereau de vente of the market."
-  bon_entree_magazinurl:
+    description: "To  specify the bordereau de vente of the market."
+  bon_entree_magazin_url:
     type: string
     format: uri
-    description: "The bordereau de vente of the market."
+    description: "To specify the bon entree en magazin offered by the third company buyer after the market took place and the product is at their disposal."
