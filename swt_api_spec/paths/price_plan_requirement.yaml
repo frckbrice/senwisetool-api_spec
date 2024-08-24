@@ -1,10 +1,9 @@
-# create a transaction
 post:
   tags:
-    - Transaction
-  summary: create a transaction
-  description: To create a transaction made between at the end of market that represents the information about this hand on operation.
-  operationId: createTransaction
+    - PricePlanRequirement
+  summary: create a price plan requirement
+  description: To create a price plan requirement that represents the requirements corresponding to a particular price plan.
+  operationId: createPricePlanRequirement
   security:
     - BearerAuth: []
   requestBody:
@@ -12,10 +11,10 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/transaction.yaml
+          $ref: ../components/schemas/price_plan_requirement.yaml
   responses:
     "201":
-      description: transaction created
+      description: price plan requirement created
     "401":
       description: Unauthorized access
     "403":
@@ -23,17 +22,17 @@ post:
     "500":
       description: internal server error
 
-# get all transaction
+# get all requirement corresponding to a particular offer
 get:
   tags:
-    - Transaction
-  summary: get all transaction
-  description: To list all transactions made by a company.
-  operationId: getAllTransaction
+    - PricePlanRequirement
+  summary: get all requirement corresponding to a particular offer
+  description: To list all requirements corresponding to a particular offer plan.
+  operationId: getAllPricePlanRequirement
   security:
     - BearerAuth: []
   parameters:
-    - name: market_id
+    - name: price_plan_id
       in: query
       description: get the receipt produced during a single market
       schema:
@@ -56,11 +55,11 @@ get:
         example: 20
   responses:
     "200":
-      description: transaction
+      description: price plan requirement
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/transaction.yaml
+            $ref: ../components/schemas/price_plan_requirement.yaml
     "401":
       description: Unauthorized access
     "403":

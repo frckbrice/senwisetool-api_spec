@@ -1,9 +1,9 @@
 # list all users
-get:
+post:
   tags:
     - Project
-  description: Get projects of a company
   summary: get all project done by this company by archived, active, draft
+  description: To create the project form by a specific company administrator (ADG).
   operationId: getAllProjectsByCompany
   security:
     - BearerAuth: []

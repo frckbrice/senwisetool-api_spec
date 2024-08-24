@@ -1,6 +1,6 @@
 post:
   tags:
-    - Farm
+    - Farm_coodinates
   summary: Update farm coordinate
   operationId: updateFarmCoordinate
   security:

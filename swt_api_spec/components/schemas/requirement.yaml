@@ -8,34 +8,34 @@ properties:
     description: "The unique Id of the requirement."
   title:
     type: string
-    description: "title of the requirement"
+    description: "Title of the requirement"
   content:
     type: object
     format: json
-    description: "content of the requirement"
+    description: "Content of the requirement"
     properties:
       content:
         type: array
         items:
           type: object
-          description: "content of the requirement"
+          description: "Content of the requirement"
           properties:
             title:
               type: string
-              description: "title of the requirement"
+              description: "Title of the requirement"
             content:
               type: array
               items:
                 type: object
                 format: json
-                description: "content of the requirement"
+                description: "Content of the requirement"
                 properties:
                   subtitle:
                     type: string
-                    description: "sub-title of the requirement"
+                    description: "Sub-title of the requirement"
                   content:
                     type: array
-                    description: "subtilte content of the requirement"
+                    description: "Subtilte content of the requirement"
                     items:
                       type: object
                       format: json
@@ -43,7 +43,7 @@ properties:
                       properties:
                         number:
                           type: string
-                          description: "subtilte number of the requirement"
+                          description: "Subtilte number of the requirement"
                         content:
                           type: string
-                          description: "content of the requirement subtilte number"
+                          description: "Content of the requirement subtilte number"

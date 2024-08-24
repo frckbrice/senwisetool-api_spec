@@ -2,7 +2,7 @@
 post:
   tags:
     - Training
-  summary: create a training data
+  summary: Create a training data
   operationId: createTraining
   requestBody:
     required: true
@@ -26,7 +26,7 @@ post:
 get:
   tags:
     - Training
-  summary: get all training data
+  summary: Get all training data
   operationId: getAllTraining
   parameters:
     - name: skip

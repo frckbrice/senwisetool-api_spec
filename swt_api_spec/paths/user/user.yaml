@@ -2,7 +2,7 @@ post:
   tags:
     - User
   summary: user stored after registration from clerk.
-  description: after registration from clerk the user object is sent to the database to be stored.
+  description: The user object that is stored to the system after being authenticated by the third party authentication system.
   operationId: createUser
 
   requestBody:
@@ -16,7 +16,7 @@ post:
               example:
                 username: user1
                 email: user@example.com
-                password: 123456
+                password: 123456hgfdjhgfshCVF2=?123
                 first_name: John
                 last_name: Doe
                 role: user
@@ -29,12 +29,13 @@ post:
         application/json:
           schema:
             $ref: ../../components/schemas/user.yaml
-    "400":
-      description: "bad request"
+    "422":
+      description: "Unprocessable Entity"
     "500":
       description: Internal server error
   security:
     - BearerAuth: []
+
 # list all the users in the
 get:
   tags:

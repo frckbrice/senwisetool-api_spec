@@ -3,6 +3,7 @@ post:
     - Company
   summary: Create a new company
   operationId: createCompany
+  description: To create a  new company in the system after registration. This operation is done by the PDG of the company exclusively.
   requestBody:
     required: true
     content:
@@ -46,6 +47,13 @@ get:
       schema:
         type: integer
         example: 20
+    - name: sort
+      in: query
+      description: sorting the resulting list of company
+      required: false
+      schema:
+        type: string
+        example: "asc | desc"
   responses:
     "200":
       description: Company list

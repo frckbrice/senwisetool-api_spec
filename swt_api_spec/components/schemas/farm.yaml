@@ -5,7 +5,7 @@ properties:
     format: cuid
     readOnly: true
     description: "The unique Id of the farm."
-  position:
+  location:
     type: object
     description: geographical position of the farm
     properties:
@@ -26,6 +26,9 @@ properties:
   village:
     type: string
     description: "Village where is located the farm"
+  division:
+    type: string
+    description: "The name of the council where the farm is located"
   council:
     type: string
     description: "The name of the council where the farm is located"
@@ -33,3 +36,14 @@ properties:
     type: string
     format: uri
     description: "The URL of the farm image"
+
+  created_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the farm was created"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the farm was updated"

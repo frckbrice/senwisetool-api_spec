@@ -3,6 +3,7 @@ get:
     - Farm
   summary: Get farm by id
   operationId: getFarmById
+  description: To get the farm by its ID.
   parameters:
     - in: path
       name: id
@@ -26,11 +27,13 @@ get:
     "403":
       description: Forbidden access
 
+# delete a farm by ID.
 delete:
   tags:
     - Farm
   summary: Delete farm by id
   operationId: deleteFarmById
+  description: To delete a farm by its ID.
   parameters:
     - in: path
       name: id

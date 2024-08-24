@@ -1,7 +1,8 @@
 post:
   tags:
     - Farm
-  summary: Create a new farm for a specific farmer
+  summary: Create a new farm
+  description: To create a new farm model that is owned by a specific farmer.
   operationId: createFarm
   requestBody:
     required: true
@@ -37,8 +38,8 @@ post:
 get:
   tags:
     - Farm
-  summary: list all the farm supervised by the company.
-  description: Get all farms
+  summary: list all the farms .
+  description: To list all the farms that are supervised by a company.
   operationId: getAllFarms
   parameters:
     - name: limit
@@ -53,6 +54,14 @@ get:
       required: false
       schema:
         type: integer
+    - name: company_id
+      in: query
+      schema:
+        type: string
+        format: cuid
+        example: 123456hgfdjhgfshCVF2
+      description: the ID of the company in charge of supervising the farm.
+      required: false
   responses:
     "200":
       description: farms
@@ -62,8 +71,9 @@ get:
             type: array
             items:
               $ref: ../../components/schemas/farm.yaml
+
     "400":
-      description: "bad request"
+      description: "Invalid Inputs"
       content:
         application/json:
           schema:
@@ -72,3 +82,5 @@ get:
               error:
                 type: string
                 example: "Invalid input data"
+    "401":
+      description: "Unauthorized access"

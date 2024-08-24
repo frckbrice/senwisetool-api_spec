@@ -1,7 +1,7 @@
 patch:
   tags:
-    - ement
-  summary: Update a eement
+    - Requirement
+  summary: Update a requirement
   operationId: updateRequirement
   parameters:
     - name: id
@@ -60,13 +60,14 @@ get:
 #delete a requirement
 delete:
   tags:
-    - Chapter
-  summary: Delete a chapter
-  operationId: deleteChapter
+    - Requirement
+  summary: Delete a Requirement
+  operationId: deleteRequirement
+  description: To delete a specific requirement.
   parameters:
     - name: id
       in: path
-      description: chapter id
+      description: Requirement id
       required: true
       schema:
         type: string
@@ -75,12 +76,12 @@ delete:
 
   responses:
     "200":
-      description: chapter deleted
+      description: Requirement deleted
     "401":
       description: Unauthorized access
     "403":
       description: Forbidden access
     "404":
-      description: No such chapter
+      description: No such Requirement
     "500":
       description: internal server error

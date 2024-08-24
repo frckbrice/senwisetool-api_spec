@@ -1,0 +1,25 @@
+# to create  the object corresponding to the price plan requiment
+type: object
+properties:
+  id:
+    type: string
+    format: (cuid1, cuid2)
+    readOnly: true
+    description: "The unique Id of the price plan requirement."
+  requiment_id:
+    type: string
+    format: cuid
+    description: the ID corresponding to the requirement involved in the relation
+  price_plan_id:
+    type: string
+    format: cuid
+    description: the ID corresponding to the price plan involved in the relation
+  created_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the price plan requirement was created"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"

@@ -11,16 +11,21 @@ properties:
     maxLength: 100
     description: Name of the company
     example: senima Co.
+  slug:
+    type: string
+    minLength: 1
+    description: Name of the company
+    example: senima Co.
   address:
     type: string
     description: Address of the company
   country:
     type: string
-    description: City of the company
+    description: country of the company
   city:
     type: string
     description: City of the company
-  phone:
+  phone_number:
     type: string
     description: Phone number of the company
   email:

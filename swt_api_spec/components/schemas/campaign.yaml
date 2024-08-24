@@ -11,3 +11,21 @@ properties:
   description:
     type: string
     description: "description of the campaign"
+  start_date:
+    type: string
+    format: date
+    description: "start date of the campaign"
+  end_date:
+    type: string
+    format: date
+    description: "end date of the campaign"
+  created_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the campaign was created"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+    description: "the date and time when the campaign was updated"

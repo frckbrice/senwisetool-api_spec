@@ -24,7 +24,10 @@ properties:
   role:
     type: string
     format: array
-    required: ["PDG", "ADG", "MEMBER"]
+    required:
+      - PDG
+      - ADG
+      - MEMBER
     description: "role of the user"
   company_id:
     type: string
@@ -38,11 +41,11 @@ properties:
     format: array
     description: "status of the user"
     required:
-      - Farmer
-      - employee
-      - auditor
-      - trainer
-      - agent
+      - FARMER
+      - EMPLOYEE
+      - AUDITOR
+      - TRAINER
+      - AGENT
   famer_attached_contract_url:
     type: string
     description: the contact that links the farmer and the company.
@@ -61,3 +64,11 @@ properties:
         "https://www.facebook.com/example",
         "https://www.linkedin.com/in/example",
       ]
+  created_at:
+    type: string
+    format: date-time
+    description: "The date and time when the user was created."
+  updated_at:
+    type: string
+    format: date-time
+    description: "The date and time when the user was updated."

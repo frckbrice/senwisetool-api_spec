@@ -18,3 +18,13 @@ properties:
     type: string
     format: cuid
     readOnly: true
+  created_at:
+    description: the date and time when the collector agent was created
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"
+  updated_at:
+    description: the date and time when the collector agent was updated
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"

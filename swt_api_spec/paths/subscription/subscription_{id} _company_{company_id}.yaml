@@ -2,6 +2,7 @@ patch:
   tags:
     - Company
   summary: Cancel company subscription
+  description: To get the subscription made by a specific company.
   operationId: cancelCompanySubscription
   security:
     - BearerAuth: []

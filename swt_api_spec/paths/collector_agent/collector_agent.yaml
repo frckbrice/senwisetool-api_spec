@@ -15,8 +15,8 @@ post:
   responses:
     "201":
       description: CollectorAgent created
-    "400":
-      description: "bad request"
+    "422":
+      description: "Unprocessable Entity"
     "401":
       description: "Unauthorized"
     "403":
