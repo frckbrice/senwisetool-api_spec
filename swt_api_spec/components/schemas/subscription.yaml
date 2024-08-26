@@ -28,7 +28,11 @@ properties:
     example: "2022-10-10T00:00:00.000Z"
   status:
     type: string
-    example: "active | inactive"
+    enum:
+      - "ACTIVE"
+      - "INACTIVE"
+      - "EXPIRRED"
+      - "SUSPENDED"
     description: To specify the status of the subscription
   description:
     description: "To specify the description about the subscription"
