@@ -29,10 +29,10 @@ properties:
   status:
     type: string
     enum:
-      - "active"
-      - "inactive"
-      - "expired"
-      - "suspended"
+      - "ACTIVE"
+      - "INACTIVE"
+      - "EXPIRRED"
+      - "SUSPENDED"
     description: To specify the status of the subscription
   description:
     description: "To specify the description about the subscription"
