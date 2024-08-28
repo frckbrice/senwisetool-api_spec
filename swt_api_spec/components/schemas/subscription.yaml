@@ -31,7 +31,7 @@ properties:
     enum:
       - "ACTIVE"
       - "INACTIVE"
-      - "EXPIRRED"
+      - "CANCELLED"
       - "SUSPENDED"
     description: To specify the status of the subscription
   description:
@@ -40,9 +40,11 @@ properties:
   payment_mode:
     type: string
     enum:
-      - "Card"
-      - "Paypal"
-      - "transfer"
+      - "Instant balance transfer."
+      - "Instant bank transfer"
+      - "PayPal "
+      - "Card "
+      - "eCheque"
   auto_renewal:
     type: boolean
     example: true

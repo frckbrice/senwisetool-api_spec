@@ -43,7 +43,7 @@ properties:
       - active
       - banned
       - inactive
-  activity:
+  role:
     type: string
     format: array
     description: "status of the user"
@@ -53,6 +53,8 @@ properties:
       - AUDITOR
       - TRAINER
       - AGENT
+      - IT_SUPPORT 
+      - SALES
   famer_attached_contract_url:
     type: string
     description: the contact that links the farmer and the company.
