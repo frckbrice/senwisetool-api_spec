@@ -35,10 +35,10 @@ properties:
       - Gold
       - Silver
       - Bronze
-    product_type:
-      type: string
-      description: To indicate the type of the corresponding price plan
-      example: "Fixed pricing | Volume pricing | etc"
+  product_type:
+    type: string
+    description: To indicate the type of the corresponding price plan
+    example: "Fixed pricing | Volume pricing | etc"
   plan_name:
     type: string
     description: "To indicate the name of the corresponding price plan"
@@ -51,8 +51,9 @@ properties:
     description: "To indicate the billing cycle of the corresponding price plan"
     example: "Every 1 year | Monthly | etc"
   number_of_billing_cycles:
-    type: integer
+    type: string
     description: "To indicate the number of billing cycles of the corresponding price plan"
+    example: "Unlimited"
   auto_renewal:
     type: boolean
     description: "To indicate the renewal options of the corresponding price plan"
