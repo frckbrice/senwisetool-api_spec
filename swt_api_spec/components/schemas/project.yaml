@@ -37,6 +37,13 @@ properties:
     description: the country of the project
     type: string
     example: "Cameroon"
+  state:
+    description: the region where the project is located
+    type: string
+    example: "Centre"
+  city:
+    type: string
+    description: the city where the project is located
   status:
     type: string
     format: array

@@ -25,6 +25,7 @@ properties:
     example: 1jssbbjsbjsbjs221878dd817dd87sd
   training_attendance_sheet_url:
     type: string
+    format: array
     description: the report of the training
   training_picture_url:
     type: string
