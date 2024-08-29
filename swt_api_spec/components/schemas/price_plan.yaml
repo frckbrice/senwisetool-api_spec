@@ -35,10 +35,10 @@ properties:
       - Gold
       - Silver
       - Bronze
-    product_type:
-      type: string
-      description: To indicate the type of the corresponding price plan
-      example: "Fixed pricing | Volume pricing | etc"
+  product_type:
+    type: string
+    description: To indicate the type of the corresponding price plan
+    example: "Fixed pricing | Volume pricing | etc"
   plan_name:
     type: string
     description: "To indicate the name of the corresponding price plan"

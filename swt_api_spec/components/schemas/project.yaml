@@ -42,7 +42,7 @@ properties:
     format: array
     description: The status of the project
     example: ["active", "draft", "archived"]
-    required:
+    enum:
       - ARCHIVED
       - DRAFT
       - ACTIVE
@@ -103,10 +103,6 @@ properties:
     format: date-time
     example: "2022-10-10T00:00:00.000Z"
   deployed_at:
-    type: string
-    format: date-time
-    example: "2022-10-10T00:00:00.000Z"
-  archived_at:
     type: string
     format: date-time
     example: "2022-10-10T00:00:00.000Z"
