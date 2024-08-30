@@ -1,4 +1,4 @@
-# senwisetool-project
+# senwisetool REST API Specifications
 
 ![dislay image](docs/swt-project-image.png)
 
