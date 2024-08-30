@@ -2,7 +2,7 @@
 
 ![dislay image](docs/swt-project-image.png)
 
-__table of content__
+**table of content**
 
 - [local setup](#setup-repo-locally)
 - [how to render the](#how-to-render-the-documentation)
@@ -11,7 +11,7 @@ __table of content__
 ## setup repo locally
 
 - Clone repo with
-  
+
   ```bash
     git clone git@github.com:frckbrice/senwisetool-api_spec.git
   ```
@@ -28,11 +28,11 @@ __table of content__
 
 - Start local server for the spec in watch mode (you could just enter cd swt_api_apec && redocly build-docs senwisetool.yaml)
 
-    ```bash
-      - npm install -g @redocly/cli@latest
-      - redocly build-docs senwisetool.yaml
-      - redocly preview-docs senwisetool.yaml
-    ```
+  ```bash
+    - npm install -g @redocly/cli@latest
+    - redocly build-docs senwisetool.yaml
+    - redocly preview-docs senwisetool.yaml
+  ```
 
 - ### API tags
 
@@ -49,6 +49,6 @@ __table of content__
   - Collector_agent
   - ...
 
-
 ### WIP (Work in Progress)
-__Thanks 🚀__
+
+**Thanks 🚀**

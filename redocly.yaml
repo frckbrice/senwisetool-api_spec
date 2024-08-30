@@ -1,3 +1,4 @@
+# See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
   senwisetool@v1:
     root: swt_api_spec/senwisetool.yaml
