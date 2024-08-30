@@ -37,18 +37,18 @@ __table of content__
     ```
 - after the preview on client finished build, you can follow the displayed link to browser and Voila.
 ## Available scripts
-```bash
- npm run
-Scripts available in @swt/senwisetool-rest-api-specifications@1.0.0 via `npm run-script`:
-  preview
-    redocly preview-docs
-  bundle
-    redocly bundle
-  bundle-deref
-    redocly bundle -d true
-  lint-redocly
-    redocly --format summary lint
-```
+  ```bash
+     npm run
+    Scripts available in @swt/senwisetool-rest-api-specifications@1.0.0 via `npm run-script`:
+      preview
+        redocly preview-docs
+      bundle
+        redocly bundle
+      bundle-deref
+        redocly bundle -d true
+      lint-redocly
+        redocly --format summary lint
+  ```
 - ### API tags
 
   - Users
