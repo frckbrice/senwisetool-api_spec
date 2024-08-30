@@ -16,7 +16,7 @@ __table of content__
     git clone git@github.com:frckbrice/senwisetool-api_spec.git
   ```
 
-- Navigate to project with from your terminal; the target is to access the senwisetool.yaml file for build.
+- Navigate to project : the target is to access the senwisetool.yaml file for build.
 
   ```bash
     cd senwisetool-api_spec/swt_api_spec
@@ -33,7 +33,7 @@ __table of content__
       - redocly build-docs senwisetool.yaml
       - redocly preview-docs senwisetool.yaml
     ```
-
+- after the preview on client finished build, you can follow the displayed link to browser and Voila.
 - ### API tags
 
   - Users
@@ -46,8 +46,12 @@ __table of content__
   - Transactions
   - project_audits
   - Market_audits
-  - Collector_agent
-  - ...
+  - Collector_agents
+  - Farm_coordinates
+  - Requirements
+  _ Price_plan
+  _ Campaigns
+  _ Stock_campaign
 
 
 ### WIP (Work in Progress)
