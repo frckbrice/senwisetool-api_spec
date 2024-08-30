@@ -49,24 +49,31 @@ __table of content__
       lint-redocly
         redocly --format summary lint
   ```
-- ### API tags
+## Available specifications
 
-  - Users
-  - Projects
-  - Subscriptions
-  - Farms
-  - Training
-  - Companies
-  - Markets
-  - Transactions
-  - project_audits
-  - Market_audits
-  - Collector_agents
-  - Farm_coordinates
-  - Requirements
-  - Price_plan
-  - Campaigns
-  - Stock_campaigns
+### OpenAPI 3.0.3
+
+The [OpenAPI](https://swagger.io/specification/v3/) specification is a programming language agnostic standard that lets providers describe the interface of their HTTP APIs. This allows both humans and machines to discover the capabilities of an API without needing to first read documentation or understand the implementation.
+ 
+| API Name              | Version |
+|-----------------------|---------|
+| Users                 | v1      |                      
+| Projects              | v1      |                           |
+| Subscriptions         | v1      |
+| Farms                 | v1      |
+| Training              | v1      | 
+| Companies             | v1      | 
+| Markets               | v1      | 
+| Transactions          | v1      | 
+| project_audits        | v2      |
+| Collector_agents      | v1      | 
+| Farm_coordinates      | v3      | 
+| Requirements          | v1      | 
+| Price_plan            | v2      |
+| Campaigns             | v1      | 
+| Stock_campaigns       | v1      | 
+                       
+
 
 
 ### WIP (Work in Progress)
