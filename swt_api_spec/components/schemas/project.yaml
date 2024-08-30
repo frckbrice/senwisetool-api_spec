@@ -34,14 +34,24 @@ properties:
     type: string
     example: "engineering"
   country:
-    description: the country of the project
     type: string
+
+    description: The countries where the project will take place
     example: "Cameroon"
-  status:
+  city:
     type: string
     format: array
+    description: The city where the project will take place
+    items:
+      type: string
+    example: ["Douala", "buea", "yaounde"]
+  status:
+    type: string
+
     description: The status of the project
+
     example: ["active", "draft", "archived"]
+
     enum:
       - ARCHIVED
       - DRAFT
