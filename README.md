@@ -51,9 +51,9 @@ __table of content__
   - Collector_agents
   - Farm_coordinates
   - Requirements
-  _ Price_plan
-  _ Campaigns
-  _ Stock_campaign
+  - Price_plan
+  - Campaigns
+  - Stock_campaigns
 
 
 ### WIP (Work in Progress)
