@@ -2,6 +2,8 @@
 
 ![dislay image](docs/swt-project-image.png)
 
+__This repository contains the specification files for  senwisetool REST APIs.__
+
 __table of content__
 
 - [local setup](#setup-repo-locally)
