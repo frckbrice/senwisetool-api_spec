@@ -49,3 +49,14 @@ properties:
   sector_of_activity:
     type: string
     description: Sector of activity of the company
+  company_paypal_email:
+    type: string
+    description: Email of the company that he uses to connect with paypal account
+  created_at:
+    type: string
+    format: date-time
+    description: Date and time when the company was created
+  updated_at:
+    type: string
+    format: date-time
+    description: Date and time when the company was updated

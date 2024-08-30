@@ -50,6 +50,8 @@ properties:
 
     description: The status of the project
 
+    example: ["active", "draft", "archived"]
+
     enum:
       - ARCHIVED
       - DRAFT

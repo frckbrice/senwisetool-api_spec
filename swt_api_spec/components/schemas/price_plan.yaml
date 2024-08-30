@@ -13,31 +13,50 @@ properties:
     type: string
     example: "$2000"
     description: " To indicate the amount of the price plan"
+
+  status:
+    type: string
+    example: "off"
+    format: object
+    enum:
+      - on
+      - off
+    description: "To indicate the status of the corresponding price plan if it's set to be functional"
   currency:
     type: string
     format: currency
     example: "USD"
     description: "To indicate the currency of the price plan"
-  name:
+  product_name:
     type: string
     description: To indicate the name of the corresponding price plan
     example: "Gold | Silver | Bronze"
-  duration:
+    enum:
+      - Gold
+      - Silver
+      - Bronze
+  product_type:
     type: string
-    example: "3 months"
-    description: "To indicate the duration of the corresponding price plan"
-  benefits:
-    type: array
-    description: "To indicate the benefits of the corresponding price plan"
-    items:
-      type: string
-      description: "To indicate the benefits of the corresponding price plan"
-  renewal_options:
-    type: array
+    description: To indicate the type of the corresponding price plan
+    example: "Fixed pricing | Volume pricing | etc"
+  plan_name:
+    type: string
+    description: "To indicate the name of the corresponding price plan"
+    example: "Gold | Silver | Bronze"
+  description:
+    type: string
+    description: "To indicate the description of the corresponding price plan. its benefits and features"
+  billing_cycle:
+    type: string
+    description: "To indicate the billing cycle of the corresponding price plan"
+    example: "Every 1 year | Monthly | etc"
+  number_of_billing_cycles:
+    type: string
+    description: "To indicate the number of billing cycles of the corresponding price plan"
+    example: "Unlimited"
+  auto_renewal:
+    type: boolean
     description: "To indicate the renewal options of the corresponding price plan"
-    items:
-      type: string
-      description: "To indicate the renewal options of the corresponding price plan"
   cancellation_policy:
     type: string
     description: "To indicate the cancellation policy of the corresponding price plan"

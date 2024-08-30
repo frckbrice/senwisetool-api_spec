@@ -99,12 +99,12 @@ x-tagGroups:
     tags:
       - Admin
 servers:
-  - url: https://{tenant}/api
+  - url: https://{tenant}/v1
     variables:
       tenant:
         default: www
         description: Your tenant id
-  - url: https://senw***seTool.com/api
+  - url: https://senw***seTool.com/v1
 paths:
   "/users": # user
     $ref: paths/user/user.yaml
@@ -154,7 +154,7 @@ paths:
     $ref: "paths/subscription/subscription.yaml"
   "/subscriptions/{id}":
     $ref: "paths/subscription/subscription_{id}.yaml"
-  "/subscriptions/{id}/company/{company_id}":
+  "/subscriptions/{company_id}/company":
     $ref: paths/subscription/subscription_{id} _company_{company_id}.yaml
   "/trainings": # training
     $ref: paths/training/training.yaml
