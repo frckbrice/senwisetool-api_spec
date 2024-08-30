@@ -13,7 +13,7 @@ __table of content__
 ## setup repo locally
 
 - Clone repo with
-  
+
   ```bash
     git clone git@github.com:frckbrice/senwisetool-api_spec.git
   ```
@@ -51,6 +51,7 @@ __table of content__
   ```
 ## Available specifications
 
+
 ### OpenAPI 3.0.3
 
   The [OpenAPI](https://swagger.io/specification/v3/) specification is a programming language agnostic standard that lets providers describe the interface of their HTTP APIs. This allows both humans and machines to discover the capabilities of an API without needing to first read documentation or understand the implementation.
@@ -73,6 +74,6 @@ __table of content__
   | Campaigns             | v1      | 
   | Stock_campaigns       | v1      | 
                          
-
 ### WIP (Work in Progress)
-__Thanks 🚀__
+
+**Thanks 🚀**

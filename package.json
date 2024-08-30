@@ -1,11 +1,19 @@
 {
-  "name": "swt-api-spec",
+  "name": "@swt/senwisetool-rest-api-specifications",
   "version": "1.0.0",
-  "description": "the api specification for senwisetool project. This api specify a type of contract between front-end and backend teams in the project. each team can work without interfering other while they are focus on their job.",
+  "description": "This repository contains the specification files for senwisetool's REST APIs.",
+  "license": "Apache-2.0",
+  "author": "avom brice",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:frckbrice/senwisetool-api_spec.git"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "preview": "redocly preview-docs",
+    "bundle": "redocly bundle",
+    "bundle-deref": "redocly bundle -d true",
+    "lint-redocly": "redocly --format summary lint",
+    "build": "redocly build-docs"
+  }
 }
