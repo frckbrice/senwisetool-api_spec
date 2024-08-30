@@ -34,8 +34,9 @@ properties:
     type: string
     example: "engineering"
   country:
-    description: the country of the project
     type: string
+    format: array
+    description: The countries where the project will take place
     example: "Cameroon"
   status:
     type: string
