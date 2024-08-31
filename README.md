@@ -66,9 +66,9 @@ __table of content__
   | Companies             | v1      | 
   | Markets               | v1      | 
   | Transactions          | v1      | 
-  | project_audits        | v2      |
+  | project_audits        | v1      |
   | Collector_agents      | v1      | 
-  | Farm_coordinates      | v3      | 
+  | Farm_coordinates      | v1      | 
   | Requirements          | v1      | 
   | Price_plan            | v2      |
   | Campaigns             | v1      | 
