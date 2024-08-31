@@ -14,7 +14,7 @@ properties:
       type: string
       required:
         - INITIAL_INSPECTION
-        - EXTERNAL_INSPECTION
+        - INTERNAL_INSPECTION
         - AUTO_EVALUATION
   company_id:
     description: the companies ID to which the project belongs to.
