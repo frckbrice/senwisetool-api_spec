@@ -78,12 +78,6 @@ properties:
         status: string,
         ...,
       }
-  archived:
-    type: boolean
-    description: To set the project as archived.
-  draft:
-    type: boolean
-    description: set project as draft.
   created_at:
     type: string
     format: date-time
