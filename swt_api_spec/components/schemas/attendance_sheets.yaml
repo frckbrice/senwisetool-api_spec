@@ -29,20 +29,7 @@ properties:
     format: array
     description: To specify the modules of the training
     example: ["Module 1", "Module 2"]
-  trainer_name:
-    type: string
-    format: array
-    description: To specify the names of the trainer
-    example: ["Trainer 1", "Trainer 2"]
-  trainer_email:
-    type: string
-    format: array
-    description: To specify the emails of the trainer
-    example: ["Trainer1@example.com", "Trainer2@example.com"]
-  trainer_signature:
-    type: string
-    format: array
-    description: To specify the signatures of the trainer
+ 
    create_at:
     type: string
     format: date-time

@@ -175,8 +175,8 @@ paths:
     $ref: "paths/collector_agent/collector_agent.yaml"
   "/collector_agents/{id}":
     $ref: paths/collector_agent/collector_agent_{id}.yaml
-  "/participants": #participants
-    $ref: paths/participant.yaml
+  "/training_session": #participants
+    $ref: paths/training_session.yaml
   "/price_plan_requirements":
     $ref: paths/price_plan_requirement.yaml
 components:

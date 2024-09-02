@@ -13,4 +13,4 @@ post:
       application/json:
         schema:
           type: object
-          $ref: "../components/schemas/participant.yaml"
+          $ref: "../components/schemas/training_session.yaml"

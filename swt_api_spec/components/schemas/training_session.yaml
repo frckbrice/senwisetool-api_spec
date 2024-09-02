@@ -17,7 +17,15 @@ properties:
     description: "email of the participant"
   signature:
     type: string
-    description: "pthe signature of the participant"
+    description: "To hold the digital the signature of the participant"
+  function:
+    type: string
+    description: To Specify the function of the participant
+    example: "Farmer, Trainer"
+  phone:
+    type: string
+    description: To Specify the phone number of the participant
+
   created_at:
     type: string
     format: date-time
