@@ -1,0 +1,55 @@
+type: object
+properties:
+  id:
+    type: string
+    format: cuid
+    description: the id of the attendance sheet
+    example: 1jssbbjsbjsbjs221878dd817dd87sd
+  training_id:
+    type: string
+    format: cuid
+    description: To specify the id of the training to which the attendance sheet belongs
+    example: 1jssbbjsbjsbjs21878dd817dd87sd
+  logo:
+    type: string
+    description: To specify the logo of the company
+    example: "https://senima.com/wp-content/uploads/2022/01/gold.png"
+    format: uri
+  date:
+    type: string
+    format: date-time
+    description: To specify the date of the attendance sheet
+    example: "2022-01-01T00:00:00.000Z"
+  training_title:
+    type: string
+    description: To specify the title of the training
+    example: "Training Title"
+  training_module:
+    type: string
+    format: array
+    description: To specify the modules of the training
+    example: ["Module 1", "Module 2"]
+  trainer_name:
+    type: string
+    format: array
+    description: To specify the names of the trainer
+    example: ["Trainer 1", "Trainer 2"]
+  trainer_email:
+    type: string
+    format: array
+    description: To specify the emails of the trainer
+    example: ["Trainer1@example.com", "Trainer2@example.com"]
+  trainer_signature:
+    type: string
+    format: array
+    description: To specify the signatures of the trainer
+   create_at:
+    type: string
+    format: date-time
+    description: To specify the creation date of the attendance sheet
+    example: "2022-01-01T00:00:00.000Z"
+  update_at:
+    type: string
+    format: date-time
+    description: To specify the update date of the attendance sheet
+    example: "2022-01-01T00:00:00.000Z"

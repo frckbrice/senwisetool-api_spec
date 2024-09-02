@@ -150,12 +150,13 @@ paths:
     $ref: "paths/inspection_data/inspection_data.yaml"
   "/inspection_data/{project_id}":
     $ref: "paths/inspection_data/inspection_data_{project_id}.yaml"
+
   "/subscriptions": # subcription
     $ref: "paths/subscription/subscription.yaml"
   "/subscriptions/{id}":
     $ref: "paths/subscription/subscription_{id}.yaml"
   "/subscriptions/{company_id}/company":
-    $ref: paths/subscription/subscription_{id} _company_{company_id}.yaml
+    $ref: paths/subscription/subscription_{company_id }_company.yaml
   "/trainings": # training
     $ref: paths/training/training.yaml
   "/trainings/{id}":

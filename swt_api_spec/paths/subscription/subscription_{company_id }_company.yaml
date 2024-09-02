@@ -7,28 +7,14 @@ patch:
   security:
     - BearerAuth: []
   parameters:
-    - name: id
-      in: path
-      description: subscription id
-      required: true
-      schema:
-        type: string
-        example: AQA9CNo0cXNLt6sZp5Uc5P0
-      style: simple
     - name: company_id
       in: path
       description: company id
       required: true
       schema:
-        type: string
         example: AQA9CNo0cXNLt6sZp5Uc5P0
-      style: simple
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          $ref: "../../components/schemas/subscription.yaml"
+        type: string
+
   responses:
     "201":
       description: company subscription cancelled

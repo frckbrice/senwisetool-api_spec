@@ -6,32 +6,56 @@ properties:
     type: string
     format: cuid
     readOnly: true
-  theme:
+  location:
     type: string
-    description: the theme for the training programming
+    description: To specify the location of the training
+  training_picture_urls:
+    type: string
+    format: array
+    description: the images of the training
+    example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
+  title:
+    type: string
+    description: To specify the title of the training
+    example: "Training Title"
+  module:
+    type: string
+    format: array
+    description: To specify the modules of the training
+    example: ["Module 1", "Module 2"]
   end_date:
     type: string
     format: date-time
+    description: To specify the date the training ended
   start_date:
     type: string
     format: date-time
-  location:
+    description: To specify the date the training started
+  report_url:
     type: string
-    description: the locality of the training
+    description: To specify the report of the training
+    example: "https://senima.com/wp-content/uploads/2022/01/report.pdf"
+  traner_proof_of_competency:
+    type: string
+    format: array
+    description: the training proof of competency of the trainer.
   company_id:
     type: string
     format: cuid
     description: the company id of the training
     example: 1jssbbjsbjsbjs221878dd817dd87sd
-  training_attendance_sheet_url:
-    type: string
-    description: the report of the training
-  training_picture_url:
+  attendance_sheets:
     type: string
     format: array
-    description: the images of the training
-    example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
-  modules:
+    description: the attendance sheets of the training
+    example: ["1jssbbjsbjsbjs221878dd817dd87sd"]
+  created_at:
     type: string
-    format: array
-    description: The modules of the training program  to be used in the training.
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "The date and time at which the transaction was created."
+  updated_at:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "The date and time at which the transaction was updated."
