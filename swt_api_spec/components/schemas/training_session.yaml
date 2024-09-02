@@ -18,9 +18,9 @@ properties:
   signature:
     type: string
     description: "To hold the digital the signature of the participant"
-  function:
+  role:
     type: string
-    description: To Specify the function of the participant
+    description: To Specify the role of the participant
     example: "Farmer, Trainer"
   phone:
     type: string
