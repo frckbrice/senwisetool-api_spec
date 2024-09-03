@@ -15,6 +15,7 @@ properties:
   email:
     type: string
     description: "email of the participant"
+
   signature:
     type: string
     description: "To hold the digital the signature of the participant"
@@ -22,10 +23,27 @@ properties:
     type: string
     description: To Specify the role of the participant
     example: "Farmer, Trainer"
+  training_id:
+    type: string
+    format: cuid
+    description: the company id of the training
+    example: 1jssbbjsbjsbjs221878dd817dd87sd
   phone:
     type: string
     description: To Specify the phone number of the participant
-
+  training_picture_urls:
+    type: string
+    format: array
+    description: the images of the training
+    example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
+  report_url:
+    type: string
+    description: To specify the report of the training
+    example: "https://senima.com/wp-content/uploads/2022/01/report.pdf"
+  trainer_proof_of_competency:
+    type: string
+    format: array
+    description: the training proof of competency of the trainer.
   created_at:
     type: string
     format: date-time

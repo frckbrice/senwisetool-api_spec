@@ -9,16 +9,11 @@ properties:
   location:
     type: string
     description: To specify the location of the training
-  training_picture_urls:
-    type: string
-    format: array
-    description: the images of the training
-    example: ["https://senima.com/wp-content/uploads/2022/01/gold.png"]
   title:
     type: string
     description: To specify the title of the training
     example: "Training Title"
-  module:
+  modules:
     type: string
     format: array
     description: To specify the modules of the training
@@ -31,20 +26,12 @@ properties:
     type: string
     format: date-time
     description: To specify the date the training started
-  report_url:
-    type: string
-    description: To specify the report of the training
-    example: "https://senima.com/wp-content/uploads/2022/01/report.pdf"
-  traner_proof_of_competency:
-    type: string
-    format: array
-    description: the training proof of competency of the trainer.
   company_id:
     type: string
     format: cuid
     description: the company id of the training
     example: 1jssbbjsbjsbjs221878dd817dd87sd
-  attendance_sheets:
+  training_sessions:
     type: string
     format: array
     description: the attendance sheets of the training
