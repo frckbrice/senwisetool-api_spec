@@ -24,7 +24,7 @@ post:
         type: boolean
         example: true
       style: simple
-    - in query:
+    - in: query
       name: type
       description: The project type to filter the projects by their type.
       required: false
