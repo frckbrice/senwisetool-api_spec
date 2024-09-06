@@ -5,9 +5,9 @@ patch:
   operationId: updateRequirement
   description: To update a requirement. Only administrators can use this operation. If you want to update a requirement, use the **updateRequirement** operation.
   parameters:
-    - name: plan_id
+    - name: id
       in: path
-      description: requireement plan ID from which the requirement will be fetched.
+      description: requireement id
       required: true
       schema:
         type: string
