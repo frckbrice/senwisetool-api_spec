@@ -6,48 +6,37 @@ properties:
     format: cuid
     readOnly: true
     description: "The unique Id of the requirement."
-  label:
+  title:
     type: string
     description: "To specify the label of the requirement used"
     example: "chapter 1 | chapter 2 | chapter 3 ..."
-  title:
+  numero:
     type: string
-    description: "Title of the requirement"
+    description: "The number representing the entry in the title. "
   content:
-    type: object
+    type: array
     format: json
     description: "Content of the requirement"
-    properties:
-      content:
-        type: array
-        items:
-          type: object
+    items:
+      type: object
+      format: json
+      properties:
+        text:
+          type: string
           description: "Content of the requirement"
+        num:
+          type: string
+          description: "Title of the requirement subtitle"
+        certif_de_group:
+          type: object
+          format: json
           properties:
-            title:
+            direction_du_group:
               type: string
-              description: "Title of the requirement"
-            content:
-              type: array
-              items:
-                type: object
-                format: json
-                description: "Content of the requirement"
-                properties:
-                  subtitle:
-                    type: string
-                    description: "Sub-title of the requirement"
-                  content:
-                    type: array
-                    description: "Subtilte content of the requirement"
-                    items:
-                      type: object
-                      format: json
-                      description: "content of the requirement"
-                      properties:
-                        number:
-                          type: string
-                          description: "Subtilte number of the requirement"
-                        content:
-                          type: string
-                          description: "Content of the requirement subtilte number"
+              description: "auto check requirement"
+            petite_exploitation_agricole:
+              type: string
+              description: "auto check requirement"
+            grande_exploitation_agricole:
+              type: string
+              description: "auto check requirement"

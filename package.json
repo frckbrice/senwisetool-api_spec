@@ -10,7 +10,7 @@
     "url": "git@github.com:frckbrice/senwisetool-api_spec.git"
   },
   "scripts": {
-    "preview": "redocly preview-docs",
+    "preview": "redocly preview-docs ./swt_api_spec/senwisetool.yaml",
     "bundle": "redocly bundle",
     "bundle-deref": "redocly bundle -d true",
     "lint-redocly": "redocly --format summary lint",
