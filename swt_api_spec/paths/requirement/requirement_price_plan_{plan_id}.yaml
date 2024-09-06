@@ -1,0 +1,29 @@
+#get single requirement
+get:
+  tags:
+    - Requirement
+  summary: Get requirement by id
+  operationId: findAllRequirements
+  description: To get a specific requirement. Only administrators can use this operation. If you want to get a specific requirement, use the **getRequirement** operation.
+  parameters:
+    - name: plan_id
+      in: path
+      description: requirement id
+      required: true
+      schema:
+        type: string
+        example: "AQA9CNo0cXNLt6sZp5Uc5P0"
+      style: simple
+  responses:
+    "200":
+      description: requirement
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/requirement.yaml
+    "404":
+      description: requirement not found
+    "401":
+      description: Unauthorized access
+    "403":
+      description: Forbidden access

@@ -170,7 +170,9 @@ paths:
   "/requirements": #requirement
     $ref: paths/requirement/requirement.yaml
   "/requirement/{id}":
-    $ref: paths/requirement/requirement_{id}.yaml
+    $ref: paths/requirement/requirement_{id} .yaml
+  "/requirement/price_plan/{plan_id}":
+    $ref: paths/requirement/requirement_price_plan_{plan_id}.yaml
   "/collector_agents": # collector_agent
     $ref: "paths/collector_agent/collector_agent.yaml"
   "/collector_agents/{id}":
