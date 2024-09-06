@@ -24,6 +24,13 @@ post:
         type: boolean
         example: true
       style: simple
+    - in query:
+      name: type
+      description: The project type to filter the projects by their type.
+      required: false
+      schema:
+        type: string
+        example: "initial inspection, external inspection, auto evaluation"
     - in: query
       name: active
       description: active projects
