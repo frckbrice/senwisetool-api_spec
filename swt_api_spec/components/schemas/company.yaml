@@ -43,6 +43,9 @@ properties:
   paypal_id:
     type: string
     description: Paypal id of the company
+  timeZone:
+    type: string
+    description: Timezone of the company that is subscribing to the plan
   payment_mode:
     type: string
     description: Payment mode of the company

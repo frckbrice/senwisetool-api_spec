@@ -53,6 +53,15 @@ properties:
     type: string
     example: "yearly"
     description: "To specify at which rate the subscription should be billed"
+  last_notification_date:
+    type: string
+    format: date-time
+    example: "2022-10-10T00:00:00.000Z"
+    description: "To specify when the last notification was sent"
+  grace_period_end:
+    type: boolean
+    example: true
+    description: "To specify if the grace period has ended"
   created_at:
     type: string
     format: date-time
