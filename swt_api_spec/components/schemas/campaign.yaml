@@ -5,9 +5,11 @@ properties:
     format: cuid
     readOnly: true
     description: "The unique Id of the campaign."
-  title:
+  name:
     type: string
     description: "title of the campaign"
+    required: true
+    readOnly: true
   description:
     type: string
     description: "description of the campaign"
@@ -19,6 +21,10 @@ properties:
     type: string
     format: date
     description: "end date of the campaign"
+  status:
+    type: string
+    enum: ["OPEN", "CLOSED"]
+    description: "status of the campaign"
   created_at:
     type: string
     format: date-time

@@ -1,0 +1,14 @@
+type: object
+properties:
+  message:
+    type: string
+  data:
+    type: object
+    format: json
+  status:
+    type: number
+    example: 200 | 201 | 202 | 204 | 400 | 401 | 403 | 404 | 500
+required:
+  - message
+  - data
+  - status

@@ -13,15 +13,21 @@ post:
           $ref: ../../components/schemas/company.yaml
 
   responses:
-    "201":
+    201:
       description: Company created
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/company.yaml"
-    "400":
+            $ref: "../../components/schemas/api-response-success-schema.yaml"
+    400:
       description: "bad request"
-    "500":
+    403: 
+      description: "Authorization failed due to insufficient permissions.",
+      content: 
+        type: application/json
+        schema: 
+          "$ref": "../../components/schemas/api-error-response.yaml"
+    500:
       description: Internal server error
 
 # get the list of the companies in the system
