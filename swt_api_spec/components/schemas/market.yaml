@@ -30,3 +30,23 @@ properties:
     type: string
     format: uri
     description: "To specify the bon entree en magazin offered by the third company buyer after the market took place and the product is at their disposal."
+  created_at:
+    type: string
+    format: date-time
+    description: "Date and time when the market was created."
+    example:
+  updated_at:
+    type: string
+    format: date-time
+    description: "Date and time when the market was created."
+    example:
+  status:
+    type: string
+    description: "Status of the market."
+    example: "open | closed"
+  code:
+    type: string
+    description: "Code of the market (cargaison)"
+  product_quantity:
+    type: integer
+    description: "Product quantity of the market."

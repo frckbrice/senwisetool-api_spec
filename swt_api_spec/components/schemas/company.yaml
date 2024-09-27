@@ -11,6 +11,9 @@ properties:
     maxLength: 100
     description: Name of the company
     example: senima Co.
+  head_office_email:
+    type: string
+    description: "The email used by people to address issues to Head office manager directly"
   slug:
     type: string
     minLength: 1

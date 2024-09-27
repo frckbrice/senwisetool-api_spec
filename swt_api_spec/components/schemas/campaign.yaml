@@ -8,7 +8,6 @@ properties:
   name:
     type: string
     description: "title of the campaign"
-    required: true
     readOnly: true
   description:
     type: string
